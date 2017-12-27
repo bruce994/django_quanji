@@ -1,0 +1,92 @@
+.player{
+  width: 100%;
+  height: 450rpx;
+}
+page{
+  background: white;
+}
+.name{
+  font-size: 40rpx;
+  font-weight: bold;
+  text-align: center;  
+  line-height: 2;
+}
+.EnglishName{
+  color: #666666;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+.contant{
+  text-align: center;
+  font-size:11px;
+margin-top:10px;
+
+}
+
+.btn-list{
+  background: white;
+  text-align: center;
+  padding: 24rpx 50rpx;
+  display: flex;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+  margin-top: 24rpx;
+  background: #fafafa;
+}
+.btn-list view{
+  width: 50%;
+  text-align: center;
+}
+.btn-list view:first-child{
+  border-right: 1rpx solid #e5e5e5;
+}
+.redColor{
+  color: red;
+}
+
+
+.messageList{
+  
+  line-height: 90rpx;
+}
+.messageList view{
+  width: 50%;
+  float: left;
+  padding-left: 40rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.messageList view text{
+  font-weight: bold;
+}
+.messageDetail{
+  width: 100%;
+  padding-left: 40rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #e5e5e5;
+  line-height: 100rpx;
+}
+.messageDetail text{
+  font-weight: bold;
+}
+
+
+.matchMessage{
+  width: 100%;
+  position: relative;
+  padding: 24rpx;
+  background: white;
+  margin-bottom: 12rpx;
+}
+.minPic{
+  width: 200rpx;
+  height: 150rpx;
+}
+.match-title{
+  position: absolute;
+  left: 240rpx;
+  top: 24rpx;
+  width: 450rpx;
+  font-size: 31rpx;
+}

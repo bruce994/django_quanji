@@ -1,0 +1,76 @@
+<view class="orderMessage">
+  <image src='{{media}}{{article.picurl}}' class="minPic"></image>
+  <view class="messagebox">
+    <view class="name">{{article.title}}</view>
+    <view class="time">{{article.game_date}}</view>
+    <view class="address">{{detail.fields.address}}</view>
+    <view class="type">门票类型：</view>
+    <view class="price">{{price.price}}<text>元</text></view>
+    <text class="number">x1</text>
+  </view>
+</view>
+<view class="buyNumber">
+  购买数量：
+  <view class="btnList">
+    <view bindtap='redNum'>-</view>
+    <view>{{num}}</view>
+    <view bindtap='addNum'>+</view>
+  </view>
+</view>
+
+<view class="sendType">
+  <view>配送方式</view>
+  <view class="sendMessge">快递费统一15元，满200包邮,偏远地区及港澳台除外</view>
+  <view class="btn bgColor">快递</view>
+  <!-- <view class="btn noColor hidden">自取</view> -->
+</view>
+
+<view class="sendAddress hidden" >
+  <text>配送地址</text>
+  <image src='../../images/arrow-right.png' class="arrow"></image>
+</view>
+
+
+<!--
+<view class="addbtn" bindtap='goAddress'>
+  <text class="fontW">+</text>
+  <text>添加收货地址</text>
+</view>
+-->
+
+
+<view class="address">
+  <text>姓名</text>
+  <input placeholder='请输入收货人姓名' value="{{username}}" bindinput="inputUsername" ></input>
+</view>
+<view class="address">
+  <text>电话</text>
+  <input type='number' placeholder='请输入收货人手机号码' bindinput="inputTel"></input>
+</view>
+<view class="address">
+  <text>所在区域</text>
+  <input type='text' placeholder='省份城市' bindinput="inputArea"></input>
+</view>
+<view class="address">
+  <text>地址</text>
+  <input placeholder='请输入收货人详细地址' bindinput="inputAddress"></input>
+</view>
+
+<view class="address"></view>
+
+
+
+
+
+
+
+
+<view class="buyTick">
+  <view>购买说明</view>
+  <view>不支持退票，不可抗因素除外.</view>
+</view>
+
+<view class="allprice">
+  应付:<text>{{totalPrice}}</text>元
+  <view class="signbtn" bindtap='sign'>提交订单</view>
+</view>

@@ -1,0 +1,26 @@
+/**index.wxss**/
+.address{
+  width: 100%;
+  padding:0 24rpx;
+  line-height: 85rpx;
+  background: white;
+  border-top: 1rpx solid #e5e5e5;
+  font-size: 28rpx;
+  position: relative;
+}
+.address input{
+  float: right;
+  text-align: right;
+  font-size: 28rpx;
+  line-height: 85rpx;
+  height: 85rpx;
+}
+.signbtn{
+  width: 680rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: white;
+  background: #d02828;
+  margin: 80rpx auto;
+  border-radius: 3rpx;
+}

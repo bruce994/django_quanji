@@ -1,0 +1,28 @@
+<view class="mybox">
+  <image src='{{userInfo.avatarUrl}}' class="head"></image>
+  <text>{{userInfo.nickName}}</text>
+</view>
+
+<!-- <view class="list borderTop borderBottom">
+  <image src='../../images/i1.jpg' class="icon"></image>
+  <text>会员中心</text>
+  <image src="../../images/arrow-right.png" class="arrow"></image>
+</view> -->
+
+<view class="list borderTop borderBottom" bindtap='goPlayer'>
+  <image src='../../images/i2.jpg' class="icon"></image>
+  <text>选手排行</text>
+  <image src="../../images/arrow-right.png" class="arrow"></image>
+</view>
+
+<view class="list borderTop borderBottom" bindtap="goMyOrder">
+  <image src='../../images/i3.jpg' class="icon"></image>
+  <text>我的订单</text>
+  <image src="../../images/arrow-right.png" class="arrow"></image>
+</view>
+
+<view class="list borderTop borderBottom" bindtap='goBuy'>
+  <image src='../../images/i4.jpg' class="icon"></image>
+  <text>购票</text>
+  <image src="../../images/arrow-right.png" class="arrow"></image>
+</view>

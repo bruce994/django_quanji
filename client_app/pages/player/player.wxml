@@ -1,0 +1,46 @@
+<view>
+  <image src="{{media}}{{player.picurl}}" class="player"></image>
+</view>
+<view class="name">{{player.username}}</view>
+<view class="EnglishName">{{player.eng_name}}</view>
+<view class="contant">{{player.history}}</view>
+<view class="btn-list">
+  <view class="{{isMatch?'redColor':''}}" bindtap='tabMatch'>资料</view>
+  <view class="{{!isMatch?'redColor':''}}" bindtap='tabMatch'>视频</view>
+</view>
+
+<view wx:if="{{isMatch}}">
+  <view class="messageList">
+    <view><text>身高：</text>{{player.height}}</view>
+    <view><text>年龄：</text>{{player.age}}</view>
+  </view>
+  <view class="messageList" >
+    <view><text>量级：</text>{{player.level}}</view>
+    <view><text>国籍：</text>{{player.nationality}}</view>
+  </view>
+  <view class="messageList">
+    <view><text>赛制：</text>{{player.rule}}</view>
+    <view><text>绰号：</text>{{player.alias}}</view>
+  </view>
+  <view class="messageDetail">
+    <text>拳馆：{{player.place}}</text>
+  </view>
+  <view class="messageDetail">
+    <text>历史战绩：{{player.history}}</text>
+  </view>
+  <view class="messageDetail">
+    <text>头衔：{{player.glory}}</text>
+  </view>
+  <view class="messageDetail">
+    <text>简介：{{player.summary}}</text>
+  </view>
+</view>
+
+
+<view  wx:if="{{!isMatch}}">
+  <view class="matchMessage" bindtap='goVideoDetail'  wx:for="{{player_video}}" wx:for-index="idx"  wx:for-item="item"  wx:key="{{item.pk}}" data-id="{{item.pk}}"  >
+    <image src="{{media}}{{item.fields.picurl}}" class="minPic"></image>
+    <view class="match-title">{{item.fields.title}}</view>
+  </view>
+
+</view>

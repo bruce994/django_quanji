@@ -1,0 +1,62 @@
+{
+  "pages":[
+
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/order/order",
+    "pages/area/area",
+    "pages/data/data",
+    "pages/video/video",
+    "pages/player/player",
+    "pages/address/address",
+    "pages/orderDetail/orderDetail",
+    "pages/videoDetail/videoDetail",
+    "pages/myOrder/myOrder",
+    "pages/content/content",
+    "pages/contentList/contentList",
+    "pages/comment/comment"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#ff625b",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/selectedHome.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "iconPath": "images/sort.png",
+        "selectedIconPath": "images/selectedSort.png",
+        "text": "赛事"
+      },
+      {
+        "pagePath": "pages/data/data",
+        "iconPath": "images/card.png",
+        "selectedIconPath": "images/selectedCard.png",
+        "text": "选手"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/selectedMy.png",
+        "text": "发现"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+
+}

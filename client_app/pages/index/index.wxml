@@ -1,0 +1,114 @@
+<!--index.wxml-->
+<video  src='{{article1.fields.video}}' class="video"  poster="{{media}}{{article1.fields.picurl}}" controls  objectFit="fill"  class="video"></video>
+
+<view class="match">
+  <text>直播</text>
+  {{article1.fields.title}}
+</view>
+
+<view class="shoppingbtn-box">
+  <view class="shoppingbtn" bindtap='buy' data-id="{{article1.fields.pid}}"  data-aid="{{article1.pk}}"  >购票</view>
+</view>
+<swiper indicator-dots="true">
+    <swiper-item>
+
+      <view class="leftbox" wx:if="{{article2_1 != ''}}"  bindtap='newVideo' data-id="{{article2_1.article.pk}}" >
+        <view class="title1">{{article2_1.fields.title}}</view>
+        <view class="time">{{ article2_1.fields.pub_date  }}</view>
+        <view class="imbox">
+          <image src='{{media}}{{article2_1.player_a.fields.picurl}}'></image>
+          <text>{{article2_1.player_a.fields.username}}</text>
+        </view>
+        <view class="centerbox">
+          <view>{{article2_1.article.fields.score}}</view>
+          <view class="lookbtn">看录像</view>
+        </view>
+        <view class="imbox">
+          <image src='{{media}}{{article2_1.player_b.fields.picurl}}'></image>
+          <text>{{article2_1.player_b.fields.username}}</text>
+        </view>
+      </view>
+
+      <view class="leftbox" wx:if="{{article2_2 != ''}}"  bindtap='newVideo' data-id="{{article2_2.article.pk}}">
+        <view class="title1">{{article2_2.fields.title}}</view>
+        <view class="time">{{article2_2.fields.pub_date}}</view>
+        <view class="imbox">
+          <image src='{{media}}{{article2_2.player_a.fields.picurl}}'></image>
+          <text>{{article2_2.player_a.fields.username}}</text>
+        </view>
+        <view class="centerbox">
+         <view>{{article2_2.article.fields.score}}</view>
+          <view class="lookbtn">看录像</view>
+        </view>
+        <view class="imbox">
+          <image src='{{media}}{{article2_2.player_b.fields.picurl}}'></image>
+          <text>{{article2_2.player_b.fields.username}}</text>
+        </view>
+      </view>
+
+
+
+    </swiper-item>
+
+
+    <swiper-item>
+
+    <view class="leftbox"  wx:if="{{article2_3 != ''}}" bindtap='newVideo' data-id="{{article2_3.article.pk}}">
+      <view class="title1">{{article2_3.fields.title}}</view>
+      <view class="time">{{article2_3.fields.pub_date}}</view>
+      <view class="imbox">
+        <image src='{{media}}{{article2_3.player_a.fields.picurl}}'></image>
+        <text>{{article2_3.player_a.fields.username}}</text>
+      </view>
+      <view class="centerbox">
+      <view>{{article2_3.article.fields.score}}</view>
+        <view class="lookbtn">看录像</view>
+      </view>
+      <view class="imbox">
+        <image src='{{media}}{{article2_3.player_b.fields.picurl}}'></image>
+        <text>{{article2_3.player_b.fields.username}}</text>
+      </view>
+    </view>
+
+    <view class="leftbox" wx:if="{{article2_4 != ''}}" bindtap='newVideo' data-id="{{article2_4.article.pk}}" >
+      <view class="title1">{{article2_4.fields.title}}</view>
+      <view class="time">{{article2_4.fields.pub_date}}</view>
+      <view class="imbox">
+        <image src='{{media}}{{article2_4.player_a.fields.picurl}}'></image>
+        <text>{{article2_4.player_a.fields.username}}</text>
+      </view>
+      <view class="centerbox">
+      <view>{{article2_4.article.fields.score}}</view>
+        <view class="lookbtn">看录像</view>
+      </view>
+      <view class="imbox">
+        <image src='{{media}}{{article2_4.player_b.fields.picurl}}'></image>
+        <text>{{article2_4.player_b.fields.username}}</text>
+      </view>
+    </view>
+
+    </swiper-item>
+
+</swiper>
+
+<view class="lookMore" bindtap='goMoreS'>查看更多赛事<image src='/images/arrow-right.png'></image></view>
+
+
+
+<view class="title">资讯</view>
+<view>
+      <view class="matchMessage" bindtap='goContent' wx:for="{{article3}}" wx:for-index="idx"  wx:for-item="item"  wx:key="{{item.pk}}" data-id="{{item.pk}}"  >
+        <image src="{{media}}{{item.fields.picurl}}" class="minPic"></image>
+        <view class="match-title">{{item.fields.title}}</view>
+        <view class="match-title">
+            <view class="messagebox">
+              <image src='../../images/time.png' class="icon1"></image>
+              <text style="margin-left:10rpx">{{item.fields.pub_date}}</text>
+              <image src='../../images/view.png' class="icon1"></image>
+              <text style="width:40px">{{item.fields.view}}</text>
+            </view>
+        </view>
+      </view>
+</view>
+
+<view class="lookMore" bindtap='goMore'>查看更多资讯<image src='/images/arrow-right.png'></image></view>

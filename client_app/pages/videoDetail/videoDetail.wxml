@@ -1,0 +1,74 @@
+<!--index.wxml-->
+<video src='{{detail.video}}' class="video"  poster="{{media}}{{detail.picurl}}" controls autoplay="true" objectFit="fill" ></video>
+<view class="match">
+  <text>直播</text>
+  {{type.title}}
+</view>
+<view class="btn-list">
+  <view class="{{isMatch?'redColor':''}}" bindtap='tabMatch'>对阵</view>
+  <view class="{{!isMatch?'redColor':''}}" bindtap='tabMatch'>动态</view>
+</view>
+<view class="shoppingbtn-box">
+  <view class="shoppingbtn" bindtap='buy' data-id="{{detail.pid}}" >购票</view>
+</view>
+<scroll-view scroll-y class="scrollBox">
+  <view wx:if="{{isMatch}}">
+    <view class="match-list">
+      <view class="messagebox">
+        <image src="{{media}}{{player_a.picurl}}" class="pic1"  bindtap='goPlayer' data-id="{{player_a.pk}}" ></image>
+        <text class="matchTitle">{{type.title}}</text>
+        <text class="matchContent">{{detail.title}}</text>
+        <text class="matchIcon">VS</text>
+        <image src="{{media}}{{player_b.picurl}}" class="pic2"  bindtap='goPlayer' data-id="{{player_b.pk}}" ></image>
+      </view>
+      <view class="box">
+        <text class="name1">{{player_a.username}}</text>
+        <text class="name2">{{player_b.username}}</text>
+      </view>
+      <view class="box">
+        <text class="EnglishName1">{{player_a.eng_name}}</text>
+        <text class="EnglishName2">{{player_b.eng_name}}</text>
+      </view>
+      <view class="box">
+        <text class="country1">国籍：{{player_a.nationality}}</text>
+        <text class="country2">国籍：{{player_b.nationality}}</text>
+      </view>
+    </view>
+
+
+  </view>
+
+  <view  wx:if="{{!isMatch}}">
+    <view class="matchMessage" bindtap='goVideoDetail'  wx:for="{{article_list}}" wx:for-index="idx"  wx:for-item="item"  wx:key="{{item.pk}}" data-id="{{item.pk}}"  >
+      <image src="{{media}}{{item.fields.picurl}}" class="minPic"></image>
+      <view class="match-title">{{item.fields.title}}</view>
+    </view>
+  </view>
+</scroll-view>
+
+
+
+
+<view class="title">评论 ({{comment_num}})</view>
+<view>
+    <scroll-view scroll-x = true bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+      <view class="matchMessage" bindtap='goContent' wx:for="{{comment_list}}" wx:for-index="idx"  wx:for-item="item"  wx:key="{{item.pk}}" data-id="{{item.pk}}"  >
+        <image src="{{item.userinfo.fields.avatarUrl}}" class="user"></image>
+        <view class="match-title1"><text class="match-title1-text">{{item.userinfo.fields.nickName}}</text></view>
+        <view class="match-title2"><text>{{item.pub_date}}</text></view>
+        <view class="match-title3"><text>{{item.fields.title}}</text></view>
+      </view>
+    </scroll-view>
+</view>
+
+
+
+
+<view style="height:260rpx;"></view>
+<view class="comment">
+  <form bindsubmit="bindFormSubmit">
+      <view><textarea placeholder="我来说两句" name="textarea" class="comment-text" maxlength="200" value="{{textareadata}}" /></view>
+      <!--<view bindtap='goComment'>{{comment_num}}</view>-->
+      <button form-type="submit" class="comment-button"> 提交 </button>
+  </form>
+</view>

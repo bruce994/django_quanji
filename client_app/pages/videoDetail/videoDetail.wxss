@@ -1,0 +1,212 @@
+/**index.wxss**/
+.video{
+  width: 100%;
+}
+.match{
+  padding:24rpx 40rpx;
+  background: white;
+}
+.match text{
+  width: 150rpx;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  background: red;
+  color: white;
+  border-radius: 40rpx;
+  margin-right: 24rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+.btn-list{
+  background: white;
+  text-align: center;
+  padding: 24rpx 50rpx;
+  display: flex;
+}
+.btn-list view{
+  width: 50%;
+  text-align: center;
+}
+.btn-list view:first-child{
+  border-right: 1rpx solid #e5e5e5;
+}
+.redColor{
+  color: red;
+}
+.shoppingbtn{
+  width: 200rpx;
+  text-align: center;
+  border: 1px solid #999999;
+  margin:0 auto;
+  line-height: 60rpx;
+  color: #666666;
+}
+
+.match-list{
+  margin-bottom: 12rpx;
+  background: white;
+  padding: 24rpx 0;
+}
+.shoppingbtn-box{
+  background: white;
+  padding: 24rpx 0;
+}
+.messagebox{
+  position: relative;
+
+  height: 200rpx;
+  background:#e9e9e9;
+
+}
+.messagebox text{
+  text-align: center;
+  display: block;
+}
+.matchTitle,.matchContent{
+  color: #666666;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  font-size: 28rpx;
+}
+.matchTitle{
+  top: 24rpx;
+}
+.matchContent{
+  top: 65rpx;
+}
+.matchIcon{
+  font-weight: bold;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 24rpx;
+  font-size: 40rpx;
+}
+.messagebox  image{
+  width: 200rpx;
+  height: 200rpx;
+  position: absolute;
+  top: 0;
+}
+.pic1{
+  left: 0;
+}
+.pic2{
+  right: 0;
+}
+.box{
+  padding: 6rpx 24rpx;
+}
+.box text:last-child{
+  float: right;
+}
+.name1{
+  font-weight: bold;
+  color: blue;
+  font-size: 38rpx;
+}
+
+.name2{
+  font-weight: bold;
+  color: red;
+  font-size: 36rpx;
+}
+
+.EnglishName1,.EnglishName2{
+  color: #555555;
+}
+
+.matchMessage{
+  width: 100%;
+  position: relative;
+  padding: 24rpx;
+  background: white;
+  margin-bottom: 12rpx;
+}
+.minPic{
+  width: 200rpx;
+  height: 150rpx;
+}
+.match-title{
+  position: absolute;
+  left: 240rpx;
+  top: 24rpx;
+  width: 450rpx;
+}
+
+.scrollBox{
+  width: 100%;
+  height: 440rpx;
+}
+
+
+
+
+
+.title{
+  padding: 24rpx;
+  color: #999999;
+  background: white;
+}
+.user{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.match-title1{
+  position: absolute;
+  left: 140rpx;
+  top: 0rpx;
+  width: 450rpx;
+  font-size:25rpx;
+}
+
+.match-title1-text{color:blue;}
+
+
+.match-title2{
+  position: absolute;
+  left: 140rpx;
+  top: 48rpx;
+  width: 450rpx;
+  font-size:25rpx;
+}
+
+.match-title3{
+  position: absolute;
+  left: 140rpx;
+  top: 84rpx;
+  width: 450rpx;
+}
+
+
+
+.comment{
+background:#fff;
+height:250rpx;
+width:100%;
+position:fixed;
+bottom:0rpx;
+}
+
+.comment view{
+float:left;
+}
+
+.comment-text{
+  width: 680rpx;
+  height:90rpx;
+  border:1rpx solid #e5e5e5;
+  margin:15px;
+}
+
+.comment-button{
+  width: 680rpx;
+  margin: 40rpx auto;
+  background: #d02828;
+  text-align: center;
+  color: white;
+  line-height: 80rpx;
+}

@@ -1,0 +1,14 @@
+
+<scroll-view scroll-x = true bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+  <view  wx:for="{{list}}" wx:for-index="idx"  wx:for-item="item"  wx:key="{{item.pk}}" >
+    <view class="title">
+      <text style='bold'>{{item.fields.title}}</text>
+    </view>
+    <view class="listbox">
+          <view class="match-list" bindtap='bindViewTap' wx:for="{{item.article}}" wx:for-index="idx"  wx:for-item="item2"  wx:key="{{item2.pk}}" data-id="{{item2.pk}}" >
+            <image src='{{media}}{{item2.fields.picurl}}' class="minPic"></image>
+            <text style='font-size:14px'>{{item2.fields.title}}</text>
+          </view>
+      </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,27 @@
+<view class="addressMessage">
+  <text>收货地址：{{detail.fields.address}}</text>
+  <text>收货人姓名：{{detail.fields.username}}</text>
+  <text>收货人电话：{{detail.fields.tel}}</text>
+</view>
+
+<view class="orderMessage">
+  <image src='{{media}}{{detail.title.fields.picurl}}' class="minPic"></image>
+  <view class="messagebox">
+    <view class="name">{{detail.title.fields.title}}</view>
+    <view class="time">{{detail.title.fields.game_date}}</view>
+    <view class="address">{{detail.place.fields.address}}</view>
+    <view class="type">门票类型：</view>
+    <view class="price">{{detail.price_place.fields.price}}<text>元</text></view>
+    <text class="number">x{{detail.fields.num}}</text>
+  </view>
+</view>
+<view class="buyNumber">
+  实付金额：{{detail.totalPrice}}元
+  <text style="{{detail.style1}}">{{detail.status_text}}</text>
+</view>
+<view class="orderDetail">
+  <view>订单编号：{{detail.pk}}</view>
+  <view>创建时间：{{detail.fields.pub_date}}</view>
+</view>
+<view class="lookbtn" bindtap='pay' style="background:green;" wx:if="{{detail.fields.status == 0}}"  >去支付</view>
+<view class="lookbtn" bindtap='look' data-id="{{detail.title.pk}}">查看赛事</view>

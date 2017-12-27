@@ -1,0 +1,21 @@
+
+
+<scroll-view scroll-x = true bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+  <view wx:for="{{list}}" wx:for-index="idx"  wx:for-item="item"  wx:key="{{item.pk}}">
+      <view class="orderMessage" bindtap="goOrderDetail" data-id="{{item.pk}}" data-uid="{{item.fields.uid}}"  >
+        <image src='{{media}}{{item.title.fields.picurl}}' class="minPic"></image>
+        <view class="messagebox">
+          <view class="name">{{item.title.fields.title}}</view>
+          <view class="time">{{item.title.fields.game_date}}</view>
+          <view class="address">{{item.place.fields.address}}</view>
+          <view class="type">门票类型：</view>
+          <view class="price">{{item.price_place.fields.price}}<text>元</text></view>
+          <text class="number">x{{item.fields.num}}</text>
+        </view>
+      </view>
+      <view class="buyNumber">
+        实付金额：{{item.totalPrice}}元
+        <text style="{{item.style1}}">{{item.status_text}}</text>
+      </view>
+  </view>
+</scroll-view>

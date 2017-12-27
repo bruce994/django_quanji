@@ -1,0 +1,35 @@
+
+<scroll-view scroll-x class="macth">
+    <view wx:for="{{type}}" wx:for-index="idx"  wx:for-item="item2"  wx:key="{{item2.pk}}" class="{{item2.isCheck?'blueColor':''}}"  bindtap='tabMatch' data-idx="{{idx}}"  >{{item2.fields.title}}</view>
+</scroll-view>
+
+<!--
+<scroll-view scroll-x class="type">
+  <view wx:for="{{items2}}" class="grayBg {{item.isCheck?'blueBg':''}}" data-index="{{index}}" bindtap='tabType'>{{item.content}}</view>
+</scroll-view>
+
+<view class="searchbox">
+  <view>
+    <image src='../../images/search.png' class="search"></image>
+    <input type='text' placeholder='输入关键词进行搜索'></input>
+  </view>
+</view>
+-->
+
+<view class="listbox">
+  <scroll-view scroll-x = true bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+    <view class="match-list" bindtap='bindViewTap' wx:for="{{list}}" wx:for-index="idx"  wx:for-item="item"  wx:key="{{item.pk}}" data-id="{{item.pk}}" style="position:relative" >
+
+      <image  src="../../images/play1.png" style="width:32px;height:32px;position:absolute;z-index:10000;left:40%;top:23%;"  mode='withFix'></image>
+
+      <image src='{{media}}{{item.fields.picurl}}' class="minPic"></image>
+      <text class="name">{{item.fields.title}}</text>
+      <view class="messagebox">
+        <image src='../../images/time.png' class="icon1"></image>
+        <text>{{item.pub_date1}}</text>
+        <image src='../../images/play.png' class="icon1"></image>
+        <text>{{item.play_count1}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

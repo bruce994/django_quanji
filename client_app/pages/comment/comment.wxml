@@ -1,0 +1,11 @@
+<view class="title">评论 ({{comment_num}})</view>
+<view>
+    <scroll-view scroll-x = true bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+      <view class="matchMessage" bindtap='goContent' wx:for="{{comment_list}}" wx:for-index="idx"  wx:for-item="item"  wx:key="{{item.pk}}" data-id="{{item.pk}}"  >
+        <image src="{{item.userinfo.fields.avatarUrl}}" class="user"></image>
+        <view class="match-title1"><text class="match-title1-text">{{item.userinfo.fields.nickName}}</text></view>
+        <view class="match-title2"><text>{{item.pub_date}}</text></view>
+        <view class="match-title3"><text>{{item.fields.title}}</text></view>
+      </view>
+    </scroll-view>
+</view>

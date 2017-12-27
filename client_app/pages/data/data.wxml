@@ -1,0 +1,19 @@
+
+<scroll-view scroll-x class="macth">
+    <view wx:for="{{level}}" wx:for-index="idx"  wx:for-item="item2"  wx:key="{{item2[0]}}" class="{{item2[2] == 1 ?'blueColor':''}}"  bindtap='tabMatch' data-idx="{{idx}}"  >{{item2[1]}}</view>
+</scroll-view>
+
+<view class="listbox">
+  <scroll-view scroll-x = true bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+      <view  wx:for="{{list}}" wx:for-index="idx"  wx:for-item="item"  wx:key="{{item.pk}}" >
+        <view class="list"  bindtap="bindViewTap" data-id="{{item.pk}}"  >
+          <image src="{{media}}{{item.fields.picurl}}" class="minPic"></image>
+          <view class="rank">{{item.sort}}</view>
+          <image src="../../images/arrow-right.png" class="arrow"></image>
+          <text class="name">{{item.fields.username}}</text>
+          <text class="EnglishName">{{item.fields.eng_name}}</text>
+          <text class="type">{{item.fields.level}}</text>
+          </view>
+      </view>
+  </scroll-view>
+</view>

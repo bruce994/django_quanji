@@ -1,0 +1,41 @@
+.mybox{
+  width: 100%;
+  position: relative;
+  padding: 20rpx 24rpx;
+  background: white;
+  margin: 30rpx auto;
+}
+.mybox .head{
+  width: 120rpx;
+  height: 120rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.mybox text{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 24rpx;
+}
+.arrow{
+  position: absolute;
+  right: 50rpx;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  width: 20rpx;
+  height: 30rpx;
+}
+.list{
+  line-height: 90rpx;
+  position: relative;
+  background: white;
+  padding-left: 100rpx;
+  margin-bottom: 12rpx;
+}
+.icon{
+  position: absolute;
+  left: 24rpx;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  width: 52rpx;
+  height: 46rpx;
+}

@@ -1,0 +1,239 @@
+/**index.wxss**/
+.video{
+  width: 100%;
+}
+.match{
+  padding:24rpx;
+  background: white;
+}
+.match text{
+  width: 100rpx;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  background: #d02828;
+  color: white;
+  border-radius: 40rpx;
+  margin-right: 24rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+.btn-list{
+  background: white;
+  text-align: center;
+  padding: 24rpx 50rpx;
+  display: flex;
+}
+.btn-list view{
+  width: 50%;
+  text-align: center;
+}
+.btn-list view:first-child{
+  border-right: 1rpx solid #e5e5e5;
+}
+.redColor{
+  color: red;
+}
+.shoppingbtn{
+  width: 200rpx;
+  text-align: center;
+  border: 1px solid #999999;
+  margin:0 auto;
+  line-height: 60rpx;
+  color: #666666;
+}
+
+.match-list{
+  margin-bottom: 12rpx;
+  background: white;
+  padding: 24rpx 0;
+}
+.shoppingbtn-box{
+  background: white;
+  padding: 24rpx 0;
+}
+.messagebox{
+  position: relative;
+
+  height: 200rpx;
+}
+.messagebox text{
+  text-align: center;
+  display: block;
+}
+.matchTitle,.matchContent{
+  color: #666666;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  font-size: 28rpx;
+}
+.matchTitle{
+  top: 24rpx;
+}
+.matchContent{
+  top: 65rpx;
+}
+.matchIcon{
+  font-weight: bold;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 24rpx;
+  font-size: 40rpx;
+}
+.messagebox  image{
+  width: 200rpx;
+  height: 200rpx;
+  position: absolute;
+  top: 0;
+}
+.pic1{
+  left: 0;
+}
+.pic2{
+  right: 0;
+}
+.box{
+  padding: 6rpx 24rpx;
+}
+.box text:last-child{
+  float: right;
+}
+.name1{
+  font-weight: bold;
+  color: blue;
+  font-size: 38rpx;
+}
+
+.name2{
+  font-weight: bold;
+  color: red;
+  font-size: 36rpx;
+}
+
+.EnglishName1,.EnglishName2{
+  color: #555555;
+}
+
+.matchMessage{
+  width: 100%;
+  position: relative;
+  padding: 24rpx;
+  background: white;
+  margin-bottom: 12rpx;
+}
+.minPic{
+  width: 200rpx;
+  height: 150rpx;
+}
+.match-title{
+  position: absolute;
+  left: 240rpx;
+  top: 24rpx;
+  width: 450rpx;
+  font-size: 31rpx;
+}
+
+.scrollBox{
+  width: 100%;
+  height: 350rpx;
+}
+.lookMore{
+  padding: 24rpx;
+  background: white;
+  font-size: 28rpx;
+  margin-bottom: 12rpx;
+  color: #999999;
+}
+.lookMore image{
+  float: right;
+  width: 15rpx;
+  height: 29rpx;
+}
+.title{
+  padding: 24rpx;
+  color: #999999;
+  background: white;
+}
+
+
+
+swiper{
+  font-size: 28rpx;
+  text-align: center;
+  background: white;
+}
+.leftbox{
+  width: 50%;
+  float: left;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+  padding: 20rpx 0;
+}
+swiper .time{
+  font-size: 24rpx;
+  color: #999999;
+  padding: 10rpx;
+}
+swiper image{
+  width: 120rpx;
+  height: 90rpx;
+  margin: 0 auto;
+}
+.imbox{
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+.imbox text{
+  display: block;
+  font-size:9px;
+
+}
+.centerbox{
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 30rpx;
+}
+.centerbox .lookbtn{
+  width: 80rpx;
+  text-align: center;
+  font-size: 20rpx;
+  line-height: 35rpx;
+  margin: 30rpx auto;
+  background: #f5f5f5;
+  border-radius: 30%;
+  color: #6da0f4;
+}
+
+
+
+
+
+
+
+.match-title .messagebox{
+  padding-top:100rpx;
+}
+
+.match-title .messagebox .icon1{
+  width: 24rpx;
+  height: 24rpx;
+  padding-top:110rpx;
+
+}
+.match-title .messagebox image,.match-title .messagebox text{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20rpx;
+  color: #d6d6d6;
+}
+.match-title .messagebox image{
+  margin-right: 5rpx;
+  padding-top:5rpx;
+}
+.match-title .messagebox text{
+  width: 150rpx;
+  margin-right: 20rpx;
+}

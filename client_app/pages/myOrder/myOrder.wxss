@@ -1,0 +1,60 @@
+
+.orderMessage{
+  width: 100%;
+  box-sizing: 100%;
+  padding: 35rpx 24rpx;
+  background: white;
+  margin: 10rpx auto 0;
+  position: relative;
+  border-top: 1rpx solid #dddddd;
+  border-bottom: 1rpx solid #dddddd;
+}
+.minPic{
+  width: 180rpx;
+  height: 255rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 24rpx;
+}
+.messagebox{
+  width: 490rpx;
+  display: inline-block;
+  vertical-align: top;
+}
+.time,.address{
+  color: #666666;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+.type{
+  color: #bdbdbd;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.price{
+  font-size: 50rpx;
+  color: #d02828;
+}
+.price text{
+  font-size: 28rpx;
+  color: black;
+  margin-left: 5rpx;
+}
+.number{
+  position: absolute;
+  right: 24rpx;
+  bottom: 50rpx;
+  color: #999999;
+}
+.buyNumber{
+  line-height: 100rpx;
+  padding: 0 24rpx;
+  background: white;
+  margin-bottom: 0rpx;
+  position: relative;
+  color: #999999;
+}/**index.wxss**/
+.buyNumber text{
+  float: right;
+}

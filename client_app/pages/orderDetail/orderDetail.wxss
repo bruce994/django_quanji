@@ -1,0 +1,100 @@
+
+.orderMessage{
+  width: 100%;
+  box-sizing: 100%;
+  padding: 35rpx 24rpx;
+  background: white;
+  margin: 0rpx auto 0;
+  position: relative;
+  border-top: 1rpx solid #dddddd;
+  border-bottom: 1rpx solid #dddddd;
+}
+.minPic{
+  width: 180rpx;
+  height: 255rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 24rpx;
+}
+.messagebox{
+  width: 490rpx;
+  display: inline-block;
+  vertical-align: top;
+}
+.time,.address{
+  color: #666666;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+.type{
+  color: #bdbdbd;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.price{
+  font-size: 50rpx;
+  color: #d02828;
+}
+.price text{
+  font-size: 28rpx;
+  color: black;
+  margin-left: 5rpx;
+}
+.number{
+  position: absolute;
+  right: 24rpx;
+  bottom: 50rpx;
+  color: #999999;
+}
+.buyNumber{
+  line-height: 100rpx;
+  padding: 0 24rpx;
+  background: white;
+  margin-bottom: 10rpx;
+  position: relative;
+  color: #999999;
+  font-size: 28rpx;
+  position: relative;
+}/**index.wxss**/
+.buyNumber text{
+  float: right;
+  line-height: 60rpx;
+  width: 130rpx;
+  border: 1rpx solid #d02828;
+  text-align: center;
+  color: #d02828;
+  border-radius: 5rpx;
+  position: absolute;
+  top: 50%;
+  -webkit-transform:translateY(-50%);
+  right: 24rpx;
+}
+.addressMessage{
+  width: 100%;
+  font-size: 28rpx;
+  background: white;
+  padding: 24rpx;
+  margin: 10rpx auto;
+}
+.addressMessage text{
+  line-height: 60rpx;
+  display: block;
+}
+.orderDetail{
+  font-size: 28rpx;
+  color: #999999;
+  padding: 24rpx;
+  background: white;
+}
+.orderDetail view{
+  line-height: 50rpx;
+}
+.lookbtn{
+  width: 680rpx;
+  line-height: 85rpx;
+  background: #d02828;
+  text-align: center;
+  color: white;
+  margin: 60rpx auto 0;
+}

@@ -1,0 +1,24 @@
+<view class="title">{{detail.title}}</view>
+<view class="time">{{article.game_date}}</view>
+<scroll-view scroll-y class="picBox">
+  <image src="{{media}}{{detail.picurl}}"></image>
+</scroll-view>
+<view class="Vip">
+  <image src="../../images/icon1.jpg" class="icon1"></image>
+  <text>超级会员独享8折优惠</text>
+  <text class="vitBtn">开通超级会员>></text>
+</view>
+
+<view class="priceList">
+
+
+
+  <view class="priceLi" style="border-color:{{item.selectColor}};" wx:for="{{price}}" wx:for-index="idx"  wx:for-item="item"  wx:key="{{item.pk}}" data-id="{{item.pk}}"  data-idx="{{idx}}" bindtap='selectPrice'  >
+    <view class="bgColor1 colorDiv" style="background:{{item.fields.color}}"></view>
+    <text class="price">{{item.fields.old_price}}元</text>
+    <text class="VipPrice">会员价{{item.fields.price}}元</text>
+  </view>
+
+</view>
+
+<view class="nextbtn" bindtap='goOrder'>下一步</view>

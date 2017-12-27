@@ -1,0 +1,18 @@
+<view class="address">
+  <text>姓名</text>
+  <input placeholder='请输入收货人姓名'></input>
+</view>
+<view class="address">
+  <text>电话</text>
+  <input type='number' placeholder='请输入收货人手机号码'></input>
+</view>
+<view class="address">
+  <text>所在区域</text>
+  <input type='text' placeholder='选择'></input>
+</view>
+<view class="address">
+  <text>地址</text>
+  <input placeholder='请输入收货人详细地址'></input>
+</view>
+
+<view class="signbtn">保存</view>

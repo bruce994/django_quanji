@@ -1,0 +1,37 @@
+
+.title{
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 70rpx;
+  padding-top: 25rpx;
+  background: white;
+  margin-top: 12rpx;
+  padding-left: 24rpx;
+  margin-bottom: 12rpx;
+  font-size: 40rpx;
+}
+.title text{
+  padding: 0 40rpx 12rpx 40rpx;
+  border-bottom: 1rpx solid Black;
+}
+.listbox{
+  background: white;
+  padding: 24rpx;
+
+}
+.match-list{
+  width: 340rpx;
+  color: #666666;
+  font-size: 28rpx;
+  background: white;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 60rpx;
+}
+.match-list:nth-child(even){
+  margin-left: 22rpx;
+}
+.minPic{
+  width:100%;
+  height: 200rpx;
+}

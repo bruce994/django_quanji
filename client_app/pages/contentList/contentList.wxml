@@ -1,0 +1,18 @@
+
+<view class="title">资讯</view>
+<view>
+    <scroll-view scroll-x = true bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+      <view class="matchMessage" bindtap='goContent' wx:for="{{article3}}" wx:for-index="idx"  wx:for-item="item"  wx:key="{{item.pk}}" data-id="{{item.pk}}"  >
+        <image src="{{media}}{{item.fields.picurl}}" class="minPic"></image>
+        <view class="match-title">{{item.fields.title}}</view>
+        <view class="match-title">
+            <view class="messagebox">
+              <image src='../../images/time.png' class="icon1"></image>
+              <text style="margin-left:10rpx">{{item.fields.pub_date}}</text>
+              <image src='../../images/view.png' class="icon1"></image>
+              <text style="width:40px">{{item.fields.view}}</text>
+            </view>
+        </view>
+      </view>
+    </scroll-view>
+</view>

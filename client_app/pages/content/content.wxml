@@ -1,0 +1,26 @@
+
+
+
+<view>
+  <view style="padding:20rpx;">
+    <view style="text-align:center;width:100%;padding:1rem;font-weight:bold;">{{player.title}}</view>
+    <import src="../../wxParse/wxParse.wxml"/>
+    <template is="wxParse" data="{{wxParseData:html_content.nodes}}"/>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+<view style="height:260rpx;"></view>
+<view class="comment">
+  <form bindsubmit="bindFormSubmit">
+      <view><textarea placeholder="我来说两句" name="textarea" class="comment-text" maxlength="200" value="{{textareadata}}" /></view>
+      <view bindtap='goComment' style='margin-top:20px;font-size:20px;margin-left:-5px;'>{{comment_num}}</view>
+      <button form-type="submit" class="comment-button"> 提交 </button>
+  </form>
+</view>
