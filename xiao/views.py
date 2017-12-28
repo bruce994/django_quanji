@@ -243,13 +243,23 @@ def comment_post(request,aid,wid,uid,title):
 
 
 @csrf_exempt
+def userinfo(request):
+    try :
+        objects = Userinfo.objects.filter(avatarUrl = request.POST.get('avatarUrl','') )
+        latest_json  = serializers.serialize('json',objects)
+        return HttpResponse('{"result":"success","detail":'+latest_json+'}', content_type='json')
+    except ObjectDoesNotExist:
+        return HttpResponse('{"result":"error"}', content_type='json')
+
+
+@csrf_exempt
 def userinfo_post(request):
     try :
         tmp = Userinfo.objects.get(openid = request.POST.get('openid','') )
         objects = tmp
+        objects.login_count +=1
     except ObjectDoesNotExist:
         objects = Userinfo()
-    objects.pub_date = timezone.now()
     objects.openid = request.POST.get('openid','')
     objects.nickName = request.POST.get('nickName','')
     objects.avatarUrl = request.POST.get('avatarUrl','')

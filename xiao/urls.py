@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^video_list/((?P<typeid>[0-9]+)/)?(PageNo/(?P<PageNo>[0-9]+)/)?$', views.video_list, name='video_list'),
     url(r'^comment_list/(aid/(?P<aid>[0-9]+)/)?(wid/(?P<wid>[0-9]+)/)?(PageNo/(?P<PageNo>[0-9]+)/)?$', views.comment_list, name='comment_list'),
     url(r'^comment_post/(?P<aid>[0-9]+)/(?P<wid>[0-9]+)/(?P<uid>[0-9]+)/(?P<title>\w+)?$', views.comment_post, name='comment_post'),
+    url(r'^userinfo/$', views.userinfo, name='userinfo'),
     url(r'^userinfo_post/$', views.userinfo_post, name='userinfo_post'),
     url(r'^ordering_post/$', views.ordering_post, name='ordering_post'),
     url(r'^wxpay/$', views.wxpay, name='wxpay'),

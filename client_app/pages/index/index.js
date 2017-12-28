@@ -20,21 +20,44 @@ Page({
     media:config.api.url+"/media/",
   },
 
+
+
   onLoad: function (options) {
       var that = this;
       that.fetchData();
 
-      // wx.checkSession({
-      //   success: function(){
-      //     var res = wx.getStorageInfoSync();
-      //     var openid =res.openid;
-      //     console.log(openid);
-      //   },
-      //   fail: function(){
+      wx.checkSession({
+        success: function(e){
+            // var uid = wx.getStorageSync('uid')
+            // console.log(uid);
+            wx.getUserInfo({
+                success:function(res){
+                    var userInfo = res.userInfo;
+                    var avatarUrl = userInfo.avatarUrl;
+                    var option = {
+                        header: { "Content-Type": "application/x-www-form-urlencoded" },   //post提交需要加这一行
+                        url: config.api.userinfo,
+                        method:'POST',
+                        data: {
+                          avatarUrl:avatarUrl,
+                        }
+                    };
+                    utils.request(option,
+                        function (res) {
+                          if(res.data.result == 'success'){
+                              var detail = res.data.detail;
+                              var openid = detail[0].fields.openid;
+                              console.log(openid);
+                          }
+                    });
+
+                 }
+            });
+        },
+        fail: function(){
                 //登陆
                 wx.login({
                     success:function(resLogin){
-
                         var code = resLogin.code; //返回code
                         wx.request({
                                url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + config.appId + '&secret=' + config.secret + '&js_code=' + code + '&grant_type=authorization_code',
@@ -62,11 +85,10 @@ Page({
                                                language:userInfo.language,
                                              }
                                          };
-
                                          utils.request(option,
                                              function (res) {
                                                if(res.data.result == 'success'){
-                                                  //wx.setStorage({key:"openid",data:openid});
+                                                   wx.setStorageSync('uid', res.data.uid)
                                                }
                                          });
 
@@ -78,12 +100,8 @@ Page({
                     }
                 });
                 //END
-      //   }
-      // });
-
-
-
-
+         }
+       });
 
   },
 

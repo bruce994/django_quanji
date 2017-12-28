@@ -1,3 +1,10 @@
-Wed, 27 Dec 2017 15:47:37 views.py[line:360] INFO {'appid': 'wx79ea0abb620d7d72', 'fee_type': 'CNY', 'attach': '戈洛夫金VS阿瓦雷兹-门票', 'trade_type': 'JSAPI', 'mch_id': '1493400272', 'result_code': 'SUCCESS', 'sign': 'C17191102C4BAC8AA69137D02F95243E', 'cash_fee': '2', 'out_trade_no': '5857824242118466', 'return_code': 'SUCCESS', 'time_end': '20171227154737', 'openid': 'oJkgV0eHkpEsymsXpFzTtK5Ojk3w', 'total_fee': '2', 'transaction_id': '4200000013201712272355981980', 'bank_type': 'CMB_CREDIT', 'nonce_str': '4e38739c7c1c4c4dafb2442c87eeb496', 'is_subscribe': 'N'}
-Wed, 27 Dec 2017 15:47:46 base.py[line:152] WARNING Not Found: /media/
-Wed, 27 Dec 2017 15:48:26 base.py[line:152] WARNING Not Found: /media/
+Thu, 28 Dec 2017 09:19:13 views.py[line:370] INFO {'total_fee': '1', 'result_code': 'SUCCESS', 'trade_type': 'JSAPI', 'nonce_str': '56b4601ea4804a0888967a1f6cfb9210', 'openid': 'oJkgV0eHkpEsymsXpFzTtK5Ojk3w', 'return_code': 'SUCCESS', 'sign': 'E28F47C201F35D294BF66DC3F13ACF5E', 'fee_type': 'CNY', 'attach': '戈洛夫金VS阿瓦雷兹-门票', 'is_subscribe': 'N', 'appid': 'wx79ea0abb620d7d72', 'mch_id': '1493400272', 'cash_fee': '1', 'out_trade_no': '2826467476343319', 'transaction_id': '4200000023201712282900987241', 'bank_type': 'CMB_CREDIT', 'time_end': '20171228091913'}
+Thu, 28 Dec 2017 09:22:14 exception.py[line:80] ERROR Invalid HTTP_HOST header: '58.87.64.147:8000'. You may need to add '58.87.64.147' to ALLOWED_HOSTS.
+Thu, 28 Dec 2017 09:29:29 base.py[line:152] WARNING Not Found: /media/
+Thu, 28 Dec 2017 09:29:29 base.py[line:152] WARNING Not Found: /media/
+Thu, 28 Dec 2017 09:30:08 base.py[line:152] WARNING Not Found: /media/
+Thu, 28 Dec 2017 09:30:08 base.py[line:152] WARNING Not Found: /media/
+Thu, 28 Dec 2017 09:48:06 base.py[line:152] WARNING Not Found: /media/
+Thu, 28 Dec 2017 09:48:06 base.py[line:152] WARNING Not Found: /media/
+Thu, 28 Dec 2017 09:48:27 base.py[line:152] WARNING Not Found: /media/
+Thu, 28 Dec 2017 09:48:27 base.py[line:152] WARNING Not Found: /media/

@@ -155,6 +155,7 @@ class UserinfoAdmin(admin.ModelAdmin):
 
 class OrderingAdmin(admin.ModelAdmin):
     list_display = ('id','username','tel','area','address','aid_name','uid_name','pid_name','price_name','num','pub_date','status_name','total_price')
+    list_filter = ['pub_date']
     search_fields = ['id','username','tel']
     fieldsets = [
         (None,               {'fields': ['aid']}),

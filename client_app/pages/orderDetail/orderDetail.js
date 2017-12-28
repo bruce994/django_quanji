@@ -21,6 +21,34 @@ Page({
     that.fetchData();
 
 
+        wx.checkSession({
+          success: function(e){
+              //var uid = wx.getStorageSync('uid')
+              //console.log(uid);
+              wx.getUserInfo({
+                  success:function(res){
+                      var userInfo = res.userInfo;
+                      var avatarUrl = userInfo.avatarUrl;
+                      var option = {
+                          header: { "Content-Type": "application/x-www-form-urlencoded" },   //post提交需要加这一行
+                          url: config.api.userinfo,
+                          method:'POST',
+                          data: {
+                            avatarUrl:avatarUrl,
+                          }
+                      };
+                      utils.request(option,
+                          function (res) {
+                            if(res.data.result == 'success'){
+                                var detail = res.data.detail;
+                                uid = detail[0].pk;
+                                openid = detail[0].fields.openid;
+                            }
+                      });
+                   }
+              });
+          },
+          fail: function(){
         //登陆
         wx.login({
             success:function(resLogin){
@@ -69,7 +97,8 @@ Page({
             }
         });
         //END
-
+      }
+    });
 
 
 

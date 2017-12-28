@@ -227,6 +227,8 @@ class Userinfo(models.Model):
     nickName = models.CharField('名称',max_length=20,default='')
     province = models.CharField('省份',max_length=20,default='')
     pub_date = models.DateTimeField('时间',auto_now_add=True)
+    login_count  = models.IntegerField('登陆次数',default=1)
+    login_date  = models.DateTimeField('最后登陆时间',auto_now=True)
 
     def avatar_picurl(self):
             return '<img src="%s" width="%d" height="%d"/>' % (self.avatarUrl,80,60)
@@ -306,6 +308,7 @@ class Ordering(models.Model):
     status_name.short_description = '是否支付'
 
     class Meta:
+        ordering = ['-pub_date']
         verbose_name = "订单"
         verbose_name_plural = "9.订单"
 
