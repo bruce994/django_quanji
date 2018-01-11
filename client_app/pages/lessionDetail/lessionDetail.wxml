@@ -1,0 +1,32 @@
+<view class="orderMessage">
+  <image src='{{media}}{{detail.fields.picurl}}' class="minPic"></image>
+  <view class="messagebox">
+
+
+  <view class="name1">{{detail.fields.title}}</view>
+  <view class="name2">
+          <view class="name3">
+            <view class="name3_1">{{detail.fields.price}} </view>
+            <view class="name3_2"> 元/人/月 </view>
+          </view>
+          <view class="signbtn2" bindtap='sign22' style="font-size:25rpx;">点击报名</view>
+  </view>
+  <view style="clear:both;"></view>
+
+
+    <view class="address"><image src='../../images/address.png' style="width:30rpx;height:30rpx;"></image> {{detail.fields.address}}</view>
+    <view class="address1"><image src='../../images/time1.png' style="width:30rpx;height:30rpx;"></image> {{detail.exercise}}</view>
+  </view>
+</view>
+
+
+
+<view class="buyNumber">
+  <view>教练</view>
+  <scroll-view scroll-x class="macth">
+      <view wx:for="{{teach}}" wx:for-index="idx"  wx:for-item="item2"  wx:key="{{item2.pk}}" class="{{item2.isCheck?'blueColor':''}}"  bindtap='tabMatch' data-idx="{{idx}}">
+          <view style="clear:both;display:block;height:100rpx;line-height:100rpx;text-align:center;"><image src='{{media}}{{item2.fields.picurl}}' style="width:100rpx;height:100rpx;"></image></view>
+          <view style="clear:both;display:block;height:40rpx;line-height:40rpx;text-align:center;">{{item2.fields.title}}</view>
+      </view>
+  </scroll-view>
+</view>

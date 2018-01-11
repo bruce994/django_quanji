@@ -59,18 +59,25 @@ Page({
                 var list = tmp.list;
                 for (var i = 0; i < list.length; i++) {
 
-                  var price = list[i]['price_place']['fields']['price'] * list[i]['fields']['num'];
+                  if(list[i]['fields']['typeid']  == 0){
+                    var price = list[i]['price_place']['fields']['price'] * list[i]['fields']['num'];
+                    list[i]['title']['fields']['game_date'] = list[i]['title']['fields']['game_date'].replace("T"," ");
+                  }else if (list[i]['fields']['typeid']  == 1) {
+                    var price = list[i]['title']['fields']['price'] * list[i]['fields']['num'];
+                    list[i]['title']['fields']['game_date'] = list[i]['title']['fields']['pub_date'].replace("T"," ");
+                  }else{
+                    var price = 0;
+                    detail['title']['fields']['game_date'] = '';
+                  }
+
                   list[i]['totalPrice'] = price;
-                  list[i]['title']['fields']['game_date'] = list[i]['title']['fields']['game_date'].replace("T"," ");
                   if(list[i]['fields']['status'] == 0){
                     list[i]['status_text'] = '未支付';
                     list[i]['style1'] = '';
                   }else if (list[i]['fields']['status'] == 1) {
                     list[i]['status_text'] = '已支付';
                     list[i]['style1'] = 'color:#d02828;';
-
                   }
-
 
 
                 }

@@ -4,11 +4,12 @@
     <scroll-view scroll-x = true bindscrolltolower="loadMore" bindscrolltoupper="refesh">
       <view class="matchMessage" bindtap='goContent' wx:for="{{article3}}" wx:for-index="idx"  wx:for-item="item"  wx:key="{{item.pk}}" data-id="{{item.pk}}"  >
         <image src="{{media}}{{item.fields.picurl}}" class="minPic"></image>
-        <view class="match-title">{{item.fields.title}}</view>
+        <view class="match-title" style="overflow:hidden;height:45rpx;" >{{item.fields.title}}</view>
+        <view class="match-title" style="font-size:22rpx;top:70rpx;">{{item.fields.shorttitle}}</view>
         <view class="match-title">
             <view class="messagebox">
               <image src='../../images/time.png' class="icon1"></image>
-              <text style="margin-left:10rpx">{{item.fields.pub_date}}</text>
+              <text style="margin-left:14rpx;">{{item.fields.pub_date}}</text>
               <image src='../../images/view.png' class="icon1"></image>
               <text style="width:40px">{{item.fields.view}}</text>
             </view>

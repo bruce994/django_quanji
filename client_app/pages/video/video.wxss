@@ -120,6 +120,8 @@
   margin-right: 10rpx;
 }
 .listbox .name{
+  height:65rpx;
+  font-size:25rpx;
   overflow:hidden;
   text-overflow:ellipsis;
   display:-webkit-box;

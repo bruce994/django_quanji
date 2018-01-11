@@ -56,7 +56,6 @@ Page({
           data: {}
       };
 
-      console.log(option);
         //发送数据请求
         utils.request(option,
             function (res) {
@@ -65,7 +64,7 @@ Page({
                 var article3 = res.data.article3;
                 for (var i = 0; i < article3.length; i++) {
                   var tmp = article3[i]['fields']['pub_date'].replace("T"," ");
-                  tmp = tmp.substr(5,12);
+                  tmp = tmp.substr(5,11);
                   article3[i]['fields']['pub_date'] = tmp;
                 }
                 var article2_1 = '';
@@ -80,7 +79,6 @@ Page({
                    article2_1.fields.pub_date  = tmp.substr(0,10);
                 }
 
-                console.log(article2_1);
 
                 if(article2.length > 1){
                    article2_2 = article2[1];

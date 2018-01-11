@@ -68,6 +68,8 @@ Page({
                   for (var i = 0; i < type.length; i++) {
                     type[i]['isCheck'] = 0;
                   }
+                  var tmp = {model: "xiao.title", pk: 0, fields: {title: "全部"}};
+                  type.unshift(tmp);
                   that.setData({
                     type:type
                   });

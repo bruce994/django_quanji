@@ -90,6 +90,10 @@ class WxPay(object):
         self.pay_data['sign'] = sign
         xml_data = dict_to_xml(self.pay_data)
         response = request(url=self.url, data=xml_data)
+
+        #logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s', datefmt='%a, %d %b %Y %H:%M:%S', filename='myapp.log', filemode='w')
+        #logging.info(xml_to_dict(response).get('err_code_des')) #定义一个日志文件，便于调试
+
         if response:
             prepay_id = xml_to_dict(response).get('prepay_id')
             paySign_data = {

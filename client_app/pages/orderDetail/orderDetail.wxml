@@ -11,7 +11,7 @@
     <view class="time">{{detail.title.fields.game_date}}</view>
     <view class="address">{{detail.place.fields.address}}</view>
     <view class="type">门票类型：</view>
-    <view class="price">{{detail.price_place.fields.price}}<text>元</text></view>
+    <view class="price"> {{ detail.fields.typeid == 0 ? detail.price_place.fields.price : detail.title.fields.price   }}   <text>元</text></view>
     <text class="number">x{{detail.fields.num}}</text>
   </view>
 </view>
@@ -24,4 +24,4 @@
   <view>创建时间：{{detail.fields.pub_date}}</view>
 </view>
 <view class="lookbtn" bindtap='pay' style="background:green;" wx:if="{{detail.fields.status == 0}}"  >去支付</view>
-<view class="lookbtn" bindtap='look' data-id="{{detail.title.pk}}">查看赛事</view>
+<view class="lookbtn" bindtap='look' data-id="{{detail.title.pk}}">查看</view>

@@ -82,10 +82,11 @@ function alert_msg(msg,type) {
 
 
 
+
 module.exports = {
   formatTime: formatTime,
   request: request,
   showLoading: showLoading,
   hideLoading: hideLoading,
-  alert_msg: alert_msg
+  alert_msg: alert_msg,
 }

@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Article,Player,Title,Writings,Comment,Userinfo,Place,Price_Place,Ordering,Pay
+from .models import Article,Player,Title,Writings,Comment,Userinfo,Place,Price_Place,Ordering,Pay,Lession,Teach
 
 from django.forms import TextInput, Textarea
 from django.db import models
@@ -117,6 +117,7 @@ class WritingsAdmin(admin.ModelAdmin):
     search_fields = ['title']
     fieldsets = [
         (None,               {'fields': ['title']}),
+        (None,               {'fields': ['shorttitle']}),
         (None,               {'fields': ['view']}),
         (None,               {'fields': ['content']}),
         ('图片',               {'fields': ['picurl']}),
@@ -154,11 +155,12 @@ class UserinfoAdmin(admin.ModelAdmin):
 
 
 class OrderingAdmin(admin.ModelAdmin):
-    list_display = ('id','username','tel','area','address','aid_name','uid_name','pid_name','price_name','num','pub_date','status_name','total_price')
+    list_display = ('id','typeid','username','tel','aid_name','uid_name','pid_name','price_name','num','pub_date','status_name','total_price')
     list_filter = ['pub_date']
     search_fields = ['id','username','tel']
     fieldsets = [
         (None,               {'fields': ['aid']}),
+        (None,               {'fields': ['typeid']}),
         (None,               {'fields': ['uid']}),
         (None,               {'fields': ['pid']}),
         (None,               {'fields': ['price_id']}),
@@ -176,6 +178,19 @@ class PayAdmin(admin.ModelAdmin):
     search_fields = ['orderid__id']  #由于orderid_id是外键
 
 
+class LessionAdmin(admin.ModelAdmin):
+    list_display = ('title','get_teachs','price','exercise_time','address','pub_date')
+    search_fields = ['title']
+
+
+class TeachAdmin(admin.ModelAdmin):
+    list_display = ('title','p_picurl','summary','pub_date')
+    search_fields = ['title']
+
+
+
+admin.site.register(Teach, TeachAdmin)
+admin.site.register(Lession, LessionAdmin)
 admin.site.register(Pay, PayAdmin)
 admin.site.register(Ordering, OrderingAdmin)
 admin.site.register(Price_Place, Price_PlaceAdmin)

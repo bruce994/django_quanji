@@ -21,7 +21,7 @@ class PathAndRename(object):
         # eg: 'images/2017/01/29/my-uploaded-file_64c942aa64.jpg'
         return os.path.join(self.path, renamed_filename)
 
-def date_compare(date,current_date):
+def date_compare(date,current_date,dd='%m-%d %H:%M'):
     seconds = (current_date -  date).total_seconds()
     if(seconds < 60):
         return '1分钟前'
@@ -33,7 +33,7 @@ def date_compare(date,current_date):
         return '1天前'
     if(seconds < 3600*24*30):
         return '一个月前'
-    return date.strftime("%m-%d %H:%M")
+    return date.strftime(dd)
 
 
 def millions_formatter(num, m=10000):

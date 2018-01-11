@@ -9,11 +9,14 @@
     "pages/video/video",
     "pages/player/player",
     "pages/address/address",
+    "pages/lessionOrder/lessionOrder",
     "pages/orderDetail/orderDetail",
     "pages/videoDetail/videoDetail",
+    "pages/lessionDetail/lessionDetail",
     "pages/myOrder/myOrder",
     "pages/content/content",
     "pages/contentList/contentList",
+    "pages/lession/lession",
     "pages/comment/comment"
 
   ],

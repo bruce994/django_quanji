@@ -1,10 +1,345 @@
-Thu, 28 Dec 2017 09:19:13 views.py[line:370] INFO {'total_fee': '1', 'result_code': 'SUCCESS', 'trade_type': 'JSAPI', 'nonce_str': '56b4601ea4804a0888967a1f6cfb9210', 'openid': 'oJkgV0eHkpEsymsXpFzTtK5Ojk3w', 'return_code': 'SUCCESS', 'sign': 'E28F47C201F35D294BF66DC3F13ACF5E', 'fee_type': 'CNY', 'attach': '戈洛夫金VS阿瓦雷兹-门票', 'is_subscribe': 'N', 'appid': 'wx79ea0abb620d7d72', 'mch_id': '1493400272', 'cash_fee': '1', 'out_trade_no': '2826467476343319', 'transaction_id': '4200000023201712282900987241', 'bank_type': 'CMB_CREDIT', 'time_end': '20171228091913'}
-Thu, 28 Dec 2017 09:22:14 exception.py[line:80] ERROR Invalid HTTP_HOST header: '58.87.64.147:8000'. You may need to add '58.87.64.147' to ALLOWED_HOSTS.
-Thu, 28 Dec 2017 09:29:29 base.py[line:152] WARNING Not Found: /media/
-Thu, 28 Dec 2017 09:29:29 base.py[line:152] WARNING Not Found: /media/
-Thu, 28 Dec 2017 09:30:08 base.py[line:152] WARNING Not Found: /media/
-Thu, 28 Dec 2017 09:30:08 base.py[line:152] WARNING Not Found: /media/
-Thu, 28 Dec 2017 09:48:06 base.py[line:152] WARNING Not Found: /media/
-Thu, 28 Dec 2017 09:48:06 base.py[line:152] WARNING Not Found: /media/
-Thu, 28 Dec 2017 09:48:27 base.py[line:152] WARNING Not Found: /media/
-Thu, 28 Dec 2017 09:48:27 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 00:02:29 views.py[line:395] INFO {'is_subscribe': 'N', 'out_trade_no': '7148257906458824', 'transaction_id': '4200000026201801068973606997', 'nonce_str': 'c394c089a59349e99b05a9ec2f3cffc5', 'result_code': 'SUCCESS', 'sign': 'A02BBD0DF2E026B81959B550FD4867A0', 'return_code': 'SUCCESS', 'cash_fee': '2', 'trade_type': 'JSAPI', 'time_end': '20180106000228', 'attach': '博击培训课程2-门票', 'bank_type': 'CMB_CREDIT', 'total_fee': '2', 'appid': 'wx79ea0abb620d7d72', 'mch_id': '1493400272', 'openid': 'oJkgV0eHkpEsymsXpFzTtK5Ojk3w', 'fee_type': 'CNY'}
+Sat, 06 Jan 2018 00:02:34 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 00:02:38 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 00:03:03 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 00:03:03 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 00:03:06 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 00:03:08 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 00:03:20 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 00:03:21 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 00:03:49 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 00:16:31 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 00:16:31 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:24:23 exception.py[line:80] ERROR Invalid HTTP_HOST header: '111.231.110.237:8000'. You may need to add '111.231.110.237' to ALLOWED_HOSTS.
+Sat, 06 Jan 2018 01:45:34 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:45:34 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:46:01 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:46:01 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:46:28 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:46:44 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:47:45 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:47:58 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:48:28 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:48:28 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:49:36 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:49:36 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:49:41 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:49:41 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:49:58 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:49:58 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:50:06 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:50:06 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:50:17 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 01:50:17 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 04:37:54 base.py[line:152] WARNING Not Found: /
+Sat, 06 Jan 2018 08:40:10 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'download.lanrenmb.com'. You may need to add 'download.lanrenmb.com' to ALLOWED_HOSTS.
+Sat, 06 Jan 2018 08:47:30 base.py[line:152] WARNING Not Found: /
+Sat, 06 Jan 2018 09:23:20 exception.py[line:80] ERROR Invalid HTTP_HOST header: '111.231.105.64:8000'. You may need to add '111.231.105.64' to ALLOWED_HOSTS.
+Sat, 06 Jan 2018 10:13:18 base.py[line:152] WARNING Not Found: /
+Sat, 06 Jan 2018 10:22:23 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 10:22:23 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 10:25:06 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'jiahe.zz.lanrenmb.com'. You may need to add 'jiahe.zz.lanrenmb.com' to ALLOWED_HOSTS.
+Sat, 06 Jan 2018 12:36:30 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'download.lanrenmb.com'. You may need to add 'download.lanrenmb.com' to ALLOWED_HOSTS.
+Sat, 06 Jan 2018 12:36:30 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'download.lanrenmb.com'. You may need to add 'download.lanrenmb.com' to ALLOWED_HOSTS.
+Sat, 06 Jan 2018 12:36:31 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'download.lanrenmb.com'. You may need to add 'download.lanrenmb.com' to ALLOWED_HOSTS.
+Sat, 06 Jan 2018 12:37:21 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 12:37:21 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 12:39:28 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 12:39:28 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 12:43:25 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 12:43:28 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 13:24:05 base.py[line:152] WARNING Not Found: /wp-includes/js/comment-reply.min.js
+Sat, 06 Jan 2018 13:24:05 base.py[line:152] WARNING Not Found: /skins/vector/csshover.htc
+Sat, 06 Jan 2018 13:24:06 base.py[line:152] WARNING Not Found: /misc/states.js
+Sat, 06 Jan 2018 13:24:06 base.py[line:152] WARNING Not Found: /include/js/md5.js
+Sat, 06 Jan 2018 13:24:06 base.py[line:152] WARNING Not Found: /include/js/common.js
+Sat, 06 Jan 2018 13:24:06 base.py[line:152] WARNING Not Found: /include/js/ajax.js
+Sat, 06 Jan 2018 13:24:07 base.py[line:152] WARNING Not Found: /res/js/dev/pages/common/global.js
+Sat, 06 Jan 2018 13:24:07 base.py[line:152] WARNING Not Found: /js/wind_editor.js
+Sat, 06 Jan 2018 13:24:07 base.py[line:152] WARNING Not Found: /styles/prosilver/template/forum_fn.js
+Sat, 06 Jan 2018 13:24:07 base.py[line:152] WARNING Not Found: /styles/prosilver/template/styleswitcher.js
+Sat, 06 Jan 2018 13:24:07 base.py[line:152] WARNING Not Found: /editor/ubb/uploader.js
+Sat, 06 Jan 2018 13:24:08 base.py[line:152] WARNING Not Found: /template/default/style.css
+Sat, 06 Jan 2018 13:24:08 base.py[line:152] WARNING Not Found: /images/js/common.js
+Sat, 06 Jan 2018 13:24:08 base.py[line:152] WARNING Not Found: /templets/style/dede.css
+Sat, 06 Jan 2018 13:24:08 base.py[line:152] WARNING Not Found: /include/dedeajax2.js
+Sat, 06 Jan 2018 13:24:09 base.py[line:152] WARNING Not Found: /images/default/inc.js
+Sat, 06 Jan 2018 13:24:09 base.py[line:152] WARNING Not Found: /js/lang/core/zh-cn.js
+Sat, 06 Jan 2018 13:24:09 base.py[line:152] WARNING Not Found: /js/lang/cms/zh-cn.js
+Sat, 06 Jan 2018 13:24:09 base.py[line:152] WARNING Not Found: /d/js/acmsd/ecms_dialog.js
+Sat, 06 Jan 2018 13:24:09 base.py[line:152] WARNING Not Found: /skin/default/js/tabs.js
+Sat, 06 Jan 2018 13:24:09 base.py[line:152] WARNING Not Found: /media/system/js/tab.js
+Sat, 06 Jan 2018 13:24:10 base.py[line:152] WARNING Not Found: /media/system/css/mootree.css
+Sat, 06 Jan 2018 13:24:10 base.py[line:152] WARNING Not Found: /lang/zh/front.js
+Sat, 06 Jan 2018 13:24:10 base.py[line:152] WARNING Not Found: /style/default/content.css
+Sat, 06 Jan 2018 13:24:10 base.py[line:152] WARNING Not Found: /lang/zh/edit.js
+Sat, 06 Jan 2018 13:24:10 base.py[line:152] WARNING Not Found: /rockmongo/
+Sat, 06 Jan 2018 13:24:11 base.py[line:152] WARNING Not Found: /server-status
+Sat, 06 Jan 2018 13:24:11 base.py[line:152] WARNING Not Found: /ueditor.all.js
+Sat, 06 Jan 2018 13:24:11 base.py[line:152] WARNING Not Found: /wikilib.d/PmWiki.ChangeLog
+Sat, 06 Jan 2018 13:24:11 base.py[line:152] WARNING Not Found: /4e5e5d7364f443e28fbf0d3ae744a59a
+Sat, 06 Jan 2018 13:24:11 base.py[line:152] WARNING Not Found: /jenkins/
+Sat, 06 Jan 2018 13:24:11 base.py[line:152] WARNING Not Found: /console/login/LoginForm.jsp
+Sat, 06 Jan 2018 13:24:12 base.py[line:152] WARNING Not Found: /solr/
+Sat, 06 Jan 2018 13:24:12 base.py[line:152] WARNING Not Found: /
+Sat, 06 Jan 2018 13:24:12 base.py[line:152] WARNING Not Found: /
+Sat, 06 Jan 2018 13:50:26 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 13:50:27 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 15:14:38 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 15:14:38 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 15:23:34 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 15:23:34 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 15:23:44 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 15:35:43 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'download.lanrenmb.com'. You may need to add 'download.lanrenmb.com' to ALLOWED_HOSTS.
+Sat, 06 Jan 2018 15:58:30 base.py[line:152] WARNING Not Found: /wikilib.d/PmWiki.ChangeLog
+Sat, 06 Jan 2018 16:16:07 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 16:16:07 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 16:17:47 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 16:18:45 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 16:18:46 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 16:19:56 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 16:19:56 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 16:22:20 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 16:27:38 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 16:27:38 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 16:30:36 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 16:31:29 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 16:39:15 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 16:39:15 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 16:39:17 base.py[line:152] WARNING Not Found: /media/
+Sat, 06 Jan 2018 17:02:05 base.py[line:152] WARNING Not Found: /4e5e5d7364f443e28fbf0d3ae744a59a
+Sat, 06 Jan 2018 17:25:08 exception.py[line:80] ERROR Invalid HTTP_HOST header: '58.87.88.80:8000'. You may need to add '58.87.88.80' to ALLOWED_HOSTS.
+Sat, 06 Jan 2018 21:00:32 base.py[line:152] WARNING Not Found: /
+Sat, 06 Jan 2018 21:11:20 base.py[line:152] WARNING Not Found: /
+Sat, 06 Jan 2018 21:48:20 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'jiahe.zz.lanrenmb.com'. You may need to add 'jiahe.zz.lanrenmb.com' to ALLOWED_HOSTS.
+Sat, 06 Jan 2018 23:17:19 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'download.lanrenmb.com'. You may need to add 'download.lanrenmb.com' to ALLOWED_HOSTS.
+Sat, 06 Jan 2018 23:21:47 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'demo4.yy.lanrenmb.com'. You may need to add 'demo4.yy.lanrenmb.com' to ALLOWED_HOSTS.
+Sun, 07 Jan 2018 01:09:01 base.py[line:152] WARNING Not Found: /
+Sun, 07 Jan 2018 01:24:35 exception.py[line:80] ERROR Invalid HTTP_HOST header: '111.231.150.100:8000'. You may need to add '111.231.150.100' to ALLOWED_HOSTS.
+Sun, 07 Jan 2018 01:47:25 base.py[line:152] WARNING Not Found: /
+Sun, 07 Jan 2018 04:00:47 base.py[line:152] WARNING Not Found: /
+Sun, 07 Jan 2018 05:25:00 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'download.lanrenmb.com'. You may need to add 'download.lanrenmb.com' to ALLOWED_HOSTS.
+Sun, 07 Jan 2018 05:43:20 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'download.lanrenmb.com'. You may need to add 'download.lanrenmb.com' to ALLOWED_HOSTS.
+Sun, 07 Jan 2018 05:43:20 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'download.lanrenmb.com'. You may need to add 'download.lanrenmb.com' to ALLOWED_HOSTS.
+Sun, 07 Jan 2018 09:22:56 exception.py[line:80] ERROR Invalid HTTP_HOST header: '58.87.67.50:8000'. You may need to add '58.87.67.50' to ALLOWED_HOSTS.
+Sun, 07 Jan 2018 11:48:17 exception.py[line:80] ERROR Invalid HTTP_HOST header: '795493f63bbd:8000'. You may need to add '795493f63bbd' to ALLOWED_HOSTS.
+Sun, 07 Jan 2018 11:48:22 exception.py[line:80] ERROR Invalid HTTP_HOST header: '795493f63bbd:8000'. You may need to add '795493f63bbd' to ALLOWED_HOSTS.
+Sun, 07 Jan 2018 12:46:59 base.py[line:152] WARNING Not Found: /wp-includes/js/comment-reply.min.js
+Sun, 07 Jan 2018 12:46:59 base.py[line:152] WARNING Not Found: /skins/vector/csshover.htc
+Sun, 07 Jan 2018 12:47:00 base.py[line:152] WARNING Not Found: /misc/states.js
+Sun, 07 Jan 2018 12:47:00 base.py[line:152] WARNING Not Found: /include/js/md5.js
+Sun, 07 Jan 2018 12:47:01 base.py[line:152] WARNING Not Found: /include/js/common.js
+Sun, 07 Jan 2018 12:47:01 base.py[line:152] WARNING Not Found: /include/js/ajax.js
+Sun, 07 Jan 2018 12:47:01 base.py[line:152] WARNING Not Found: /res/js/dev/pages/common/global.js
+Sun, 07 Jan 2018 12:47:02 base.py[line:152] WARNING Not Found: /js/wind_editor.js
+Sun, 07 Jan 2018 12:47:02 base.py[line:152] WARNING Not Found: /styles/prosilver/template/forum_fn.js
+Sun, 07 Jan 2018 12:47:03 base.py[line:152] WARNING Not Found: /styles/prosilver/template/styleswitcher.js
+Sun, 07 Jan 2018 12:47:03 base.py[line:152] WARNING Not Found: /editor/ubb/uploader.js
+Sun, 07 Jan 2018 12:47:03 base.py[line:152] WARNING Not Found: /template/default/style.css
+Sun, 07 Jan 2018 12:47:03 base.py[line:152] WARNING Not Found: /images/js/common.js
+Sun, 07 Jan 2018 12:47:04 base.py[line:152] WARNING Not Found: /templets/style/dede.css
+Sun, 07 Jan 2018 12:47:04 base.py[line:152] WARNING Not Found: /include/dedeajax2.js
+Sun, 07 Jan 2018 12:47:04 base.py[line:152] WARNING Not Found: /images/default/inc.js
+Sun, 07 Jan 2018 12:47:05 base.py[line:152] WARNING Not Found: /js/lang/core/zh-cn.js
+Sun, 07 Jan 2018 12:47:05 base.py[line:152] WARNING Not Found: /js/lang/cms/zh-cn.js
+Sun, 07 Jan 2018 12:47:05 base.py[line:152] WARNING Not Found: /d/js/acmsd/ecms_dialog.js
+Sun, 07 Jan 2018 12:47:05 base.py[line:152] WARNING Not Found: /skin/default/js/tabs.js
+Sun, 07 Jan 2018 12:47:05 base.py[line:152] WARNING Not Found: /media/system/js/tab.js
+Sun, 07 Jan 2018 12:47:06 base.py[line:152] WARNING Not Found: /media/system/css/mootree.css
+Sun, 07 Jan 2018 12:47:06 base.py[line:152] WARNING Not Found: /lang/zh/front.js
+Sun, 07 Jan 2018 12:47:06 base.py[line:152] WARNING Not Found: /style/default/content.css
+Sun, 07 Jan 2018 12:47:07 base.py[line:152] WARNING Not Found: /lang/zh/edit.js
+Sun, 07 Jan 2018 12:47:07 base.py[line:152] WARNING Not Found: /rockmongo/
+Sun, 07 Jan 2018 12:47:07 base.py[line:152] WARNING Not Found: /server-status
+Sun, 07 Jan 2018 12:47:07 base.py[line:152] WARNING Not Found: /ueditor.all.js
+Sun, 07 Jan 2018 12:47:07 base.py[line:152] WARNING Not Found: /wikilib.d/PmWiki.ChangeLog
+Sun, 07 Jan 2018 12:47:08 base.py[line:152] WARNING Not Found: /4e5e5d7364f443e28fbf0d3ae744a59a
+Sun, 07 Jan 2018 12:47:08 base.py[line:152] WARNING Not Found: /jenkins/
+Sun, 07 Jan 2018 12:47:08 base.py[line:152] WARNING Not Found: /console/login/LoginForm.jsp
+Sun, 07 Jan 2018 12:47:08 base.py[line:152] WARNING Not Found: /solr/
+Sun, 07 Jan 2018 12:47:08 base.py[line:152] WARNING Not Found: /
+Sun, 07 Jan 2018 12:47:09 base.py[line:152] WARNING Not Found: /
+Sun, 07 Jan 2018 12:47:46 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 12:47:46 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 13:57:27 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'jiahe.zz.lanrenmb.com.cdn.dnsv1.com'. You may need to add 'jiahe.zz.lanrenmb.com.cdn.dnsv1.com' to ALLOWED_HOSTS.
+Sun, 07 Jan 2018 15:14:27 base.py[line:152] WARNING Not Found: /
+Sun, 07 Jan 2018 16:01:10 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 16:01:10 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 16:35:57 base.py[line:152] WARNING Not Found: /console/login/LoginForm.jsp
+Sun, 07 Jan 2018 16:50:35 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 16:50:35 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 17:06:11 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 17:06:11 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 17:25:02 exception.py[line:80] ERROR Invalid HTTP_HOST header: '115.159.127.88:8000'. You may need to add '115.159.127.88' to ALLOWED_HOSTS.
+Sun, 07 Jan 2018 18:07:00 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 18:07:00 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 18:17:31 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'demo4.yy.lanrenmb.com'. You may need to add 'demo4.yy.lanrenmb.com' to ALLOWED_HOSTS.
+Sun, 07 Jan 2018 20:26:03 base.py[line:152] WARNING Not Found: /
+Sun, 07 Jan 2018 20:52:29 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 20:52:29 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 21:00:14 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 21:00:14 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 22:08:58 base.py[line:152] WARNING Not Found: /
+Sun, 07 Jan 2018 22:53:10 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 22:53:10 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 22:53:28 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 22:53:28 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 22:54:27 base.py[line:152] WARNING Not Found: /media/
+Sun, 07 Jan 2018 22:54:27 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 01:23:21 exception.py[line:80] ERROR Invalid HTTP_HOST header: '111.230.193.95:8000'. You may need to add '111.230.193.95' to ALLOWED_HOSTS.
+Mon, 08 Jan 2018 02:31:12 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 02:31:12 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 09:22:29 base.py[line:152] WARNING Not Found: /
+Mon, 08 Jan 2018 09:22:41 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'download.lanrenmb.com'. You may need to add 'download.lanrenmb.com' to ALLOWED_HOSTS.
+Mon, 08 Jan 2018 09:22:42 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'download.lanrenmb.com'. You may need to add 'download.lanrenmb.com' to ALLOWED_HOSTS.
+Mon, 08 Jan 2018 09:22:51 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'download.lanrenmb.com'. You may need to add 'download.lanrenmb.com' to ALLOWED_HOSTS.
+Mon, 08 Jan 2018 09:24:12 exception.py[line:80] ERROR Invalid HTTP_HOST header: '111.230.107.173:8000'. You may need to add '111.230.107.173' to ALLOWED_HOSTS.
+Mon, 08 Jan 2018 10:06:11 base.py[line:152] WARNING Not Found: /
+Mon, 08 Jan 2018 10:39:32 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 10:39:32 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 13:25:16 base.py[line:152] WARNING Not Found: /
+Mon, 08 Jan 2018 14:28:53 base.py[line:152] WARNING Not Found: /wp-includes/js/comment-reply.min.js
+Mon, 08 Jan 2018 14:28:53 base.py[line:152] WARNING Not Found: /skins/vector/csshover.htc
+Mon, 08 Jan 2018 14:28:53 base.py[line:152] WARNING Not Found: /misc/states.js
+Mon, 08 Jan 2018 14:28:54 base.py[line:152] WARNING Not Found: /include/js/md5.js
+Mon, 08 Jan 2018 14:28:54 base.py[line:152] WARNING Not Found: /include/js/common.js
+Mon, 08 Jan 2018 14:28:54 base.py[line:152] WARNING Not Found: /include/js/ajax.js
+Mon, 08 Jan 2018 14:28:54 base.py[line:152] WARNING Not Found: /res/js/dev/pages/common/global.js
+Mon, 08 Jan 2018 14:28:54 base.py[line:152] WARNING Not Found: /js/wind_editor.js
+Mon, 08 Jan 2018 14:28:55 base.py[line:152] WARNING Not Found: /styles/prosilver/template/forum_fn.js
+Mon, 08 Jan 2018 14:28:55 base.py[line:152] WARNING Not Found: /styles/prosilver/template/styleswitcher.js
+Mon, 08 Jan 2018 14:28:55 base.py[line:152] WARNING Not Found: /editor/ubb/uploader.js
+Mon, 08 Jan 2018 14:28:55 base.py[line:152] WARNING Not Found: /template/default/style.css
+Mon, 08 Jan 2018 14:28:56 base.py[line:152] WARNING Not Found: /images/js/common.js
+Mon, 08 Jan 2018 14:28:56 base.py[line:152] WARNING Not Found: /templets/style/dede.css
+Mon, 08 Jan 2018 14:28:56 base.py[line:152] WARNING Not Found: /include/dedeajax2.js
+Mon, 08 Jan 2018 14:28:56 base.py[line:152] WARNING Not Found: /images/default/inc.js
+Mon, 08 Jan 2018 14:28:57 base.py[line:152] WARNING Not Found: /js/lang/core/zh-cn.js
+Mon, 08 Jan 2018 14:28:57 base.py[line:152] WARNING Not Found: /js/lang/cms/zh-cn.js
+Mon, 08 Jan 2018 14:28:57 base.py[line:152] WARNING Not Found: /d/js/acmsd/ecms_dialog.js
+Mon, 08 Jan 2018 14:28:57 base.py[line:152] WARNING Not Found: /skin/default/js/tabs.js
+Mon, 08 Jan 2018 14:28:58 base.py[line:152] WARNING Not Found: /media/system/js/tab.js
+Mon, 08 Jan 2018 14:28:58 base.py[line:152] WARNING Not Found: /media/system/css/mootree.css
+Mon, 08 Jan 2018 14:28:58 base.py[line:152] WARNING Not Found: /lang/zh/front.js
+Mon, 08 Jan 2018 14:28:58 base.py[line:152] WARNING Not Found: /style/default/content.css
+Mon, 08 Jan 2018 14:28:58 base.py[line:152] WARNING Not Found: /lang/zh/edit.js
+Mon, 08 Jan 2018 14:28:59 base.py[line:152] WARNING Not Found: /rockmongo/
+Mon, 08 Jan 2018 14:28:59 base.py[line:152] WARNING Not Found: /server-status
+Mon, 08 Jan 2018 14:28:59 base.py[line:152] WARNING Not Found: /ueditor.all.js
+Mon, 08 Jan 2018 14:28:59 base.py[line:152] WARNING Not Found: /wikilib.d/PmWiki.ChangeLog
+Mon, 08 Jan 2018 14:28:59 base.py[line:152] WARNING Not Found: /4e5e5d7364f443e28fbf0d3ae744a59a
+Mon, 08 Jan 2018 14:29:00 base.py[line:152] WARNING Not Found: /jenkins/
+Mon, 08 Jan 2018 14:29:00 base.py[line:152] WARNING Not Found: /console/login/LoginForm.jsp
+Mon, 08 Jan 2018 14:29:00 base.py[line:152] WARNING Not Found: /solr/
+Mon, 08 Jan 2018 14:29:00 base.py[line:152] WARNING Not Found: /
+Mon, 08 Jan 2018 14:29:00 base.py[line:152] WARNING Not Found: /
+Mon, 08 Jan 2018 14:31:05 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 14:31:05 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 14:32:09 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 14:32:10 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 14:50:51 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 15:43:29 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 15:43:29 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 15:45:31 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 15:45:33 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 15:45:33 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 15:47:32 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 15:47:51 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 15:47:53 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 15:50:11 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 15:50:11 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 15:51:51 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 15:53:35 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 15:55:34 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 15:55:34 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 15:55:39 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 16:15:58 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 16:15:58 base.py[line:152] WARNING Not Found: /media/
+Mon, 08 Jan 2018 17:25:09 exception.py[line:80] ERROR Invalid HTTP_HOST header: '111.231.139.160:8000'. You may need to add '111.231.139.160' to ALLOWED_HOSTS.
+Mon, 08 Jan 2018 18:33:17 exception.py[line:80] ERROR Invalid HTTP_HOST header: '795493f63bbd:8000'. You may need to add '795493f63bbd' to ALLOWED_HOSTS.
+Mon, 08 Jan 2018 19:58:32 base.py[line:152] WARNING Not Found: /wp-includes/js/comment-reply.min.js
+Mon, 08 Jan 2018 19:58:32 base.py[line:152] WARNING Not Found: /skins/vector/csshover.htc
+Mon, 08 Jan 2018 19:58:36 base.py[line:152] WARNING Not Found: /misc/states.js
+Mon, 08 Jan 2018 19:58:36 base.py[line:152] WARNING Not Found: /include/js/md5.js
+Mon, 08 Jan 2018 19:58:36 base.py[line:152] WARNING Not Found: /include/js/common.js
+Mon, 08 Jan 2018 19:58:37 base.py[line:152] WARNING Not Found: /include/js/ajax.js
+Mon, 08 Jan 2018 19:58:37 base.py[line:152] WARNING Not Found: /res/js/dev/pages/common/global.js
+Mon, 08 Jan 2018 19:58:37 base.py[line:152] WARNING Not Found: /js/wind_editor.js
+Mon, 08 Jan 2018 19:58:37 base.py[line:152] WARNING Not Found: /styles/prosilver/template/forum_fn.js
+Mon, 08 Jan 2018 19:58:38 base.py[line:152] WARNING Not Found: /styles/prosilver/template/styleswitcher.js
+Mon, 08 Jan 2018 19:58:38 base.py[line:152] WARNING Not Found: /editor/ubb/uploader.js
+Mon, 08 Jan 2018 19:58:38 base.py[line:152] WARNING Not Found: /template/default/style.css
+Mon, 08 Jan 2018 19:58:39 base.py[line:152] WARNING Not Found: /images/js/common.js
+Mon, 08 Jan 2018 19:58:39 base.py[line:152] WARNING Not Found: /templets/style/dede.css
+Mon, 08 Jan 2018 19:58:39 base.py[line:152] WARNING Not Found: /include/dedeajax2.js
+Mon, 08 Jan 2018 19:58:39 base.py[line:152] WARNING Not Found: /images/default/inc.js
+Mon, 08 Jan 2018 19:58:39 base.py[line:152] WARNING Not Found: /js/lang/core/zh-cn.js
+Mon, 08 Jan 2018 19:58:40 base.py[line:152] WARNING Not Found: /js/lang/cms/zh-cn.js
+Mon, 08 Jan 2018 19:58:40 base.py[line:152] WARNING Not Found: /d/js/acmsd/ecms_dialog.js
+Mon, 08 Jan 2018 19:58:40 base.py[line:152] WARNING Not Found: /skin/default/js/tabs.js
+Mon, 08 Jan 2018 19:58:40 base.py[line:152] WARNING Not Found: /media/system/js/tab.js
+Mon, 08 Jan 2018 19:58:40 base.py[line:152] WARNING Not Found: /media/system/css/mootree.css
+Mon, 08 Jan 2018 19:58:41 base.py[line:152] WARNING Not Found: /lang/zh/front.js
+Mon, 08 Jan 2018 19:58:41 base.py[line:152] WARNING Not Found: /style/default/content.css
+Mon, 08 Jan 2018 19:58:41 base.py[line:152] WARNING Not Found: /lang/zh/edit.js
+Mon, 08 Jan 2018 19:58:41 base.py[line:152] WARNING Not Found: /rockmongo/
+Mon, 08 Jan 2018 19:58:42 base.py[line:152] WARNING Not Found: /server-status
+Mon, 08 Jan 2018 19:58:42 base.py[line:152] WARNING Not Found: /ueditor.all.js
+Mon, 08 Jan 2018 19:58:42 base.py[line:152] WARNING Not Found: /wikilib.d/PmWiki.ChangeLog
+Mon, 08 Jan 2018 19:58:42 base.py[line:152] WARNING Not Found: /4e5e5d7364f443e28fbf0d3ae744a59a
+Mon, 08 Jan 2018 19:58:42 base.py[line:152] WARNING Not Found: /jenkins/
+Mon, 08 Jan 2018 19:58:42 base.py[line:152] WARNING Not Found: /console/login/LoginForm.jsp
+Mon, 08 Jan 2018 19:58:43 base.py[line:152] WARNING Not Found: /solr/
+Mon, 08 Jan 2018 19:58:43 base.py[line:152] WARNING Not Found: /
+Mon, 08 Jan 2018 20:23:47 exception.py[line:80] ERROR Invalid HTTP_HOST header: '795493f63bbd:8000'. You may need to add '795493f63bbd' to ALLOWED_HOSTS.
+Mon, 08 Jan 2018 20:23:52 exception.py[line:80] ERROR Invalid HTTP_HOST header: '795493f63bbd:8000'. You may need to add '795493f63bbd' to ALLOWED_HOSTS.
+Mon, 08 Jan 2018 20:57:09 base.py[line:152] WARNING Not Found: /
+Mon, 08 Jan 2018 21:19:26 base.py[line:152] WARNING Not Found: /media/
+Tue, 09 Jan 2018 00:59:15 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'demo4.yy.lanrenmb.com'. You may need to add 'demo4.yy.lanrenmb.com' to ALLOWED_HOSTS.
+Tue, 09 Jan 2018 01:22:28 exception.py[line:80] ERROR Invalid HTTP_HOST header: '111.231.82.44:8000'. You may need to add '111.231.82.44' to ALLOWED_HOSTS.
+Tue, 09 Jan 2018 02:37:52 base.py[line:152] WARNING Not Found: /admin/config.php
+Tue, 09 Jan 2018 04:17:39 exception.py[line:80] ERROR Invalid HTTP_HOST header: 'www.qq.com'. You may need to add 'www.qq.com' to ALLOWED_HOSTS.
+Tue, 09 Jan 2018 07:42:06 base.py[line:152] WARNING Not Found: /a2billing/common/javascript/misc.js
+Tue, 09 Jan 2018 08:22:52 base.py[line:152] WARNING Not Found: /
+Tue, 09 Jan 2018 09:23:56 exception.py[line:80] ERROR Invalid HTTP_HOST header: '111.230.181.14:8000'. You may need to add '111.230.181.14' to ALLOWED_HOSTS.
+Tue, 09 Jan 2018 12:54:43 base.py[line:152] WARNING Not Found: /media/
+Tue, 09 Jan 2018 12:54:43 base.py[line:152] WARNING Not Found: /media/
+Tue, 09 Jan 2018 13:18:50 base.py[line:152] WARNING Not Found: /wp-includes/js/comment-reply.min.js
+Tue, 09 Jan 2018 13:18:51 base.py[line:152] WARNING Not Found: /skins/vector/csshover.htc
+Tue, 09 Jan 2018 13:18:51 base.py[line:152] WARNING Not Found: /misc/states.js
+Tue, 09 Jan 2018 13:18:51 base.py[line:152] WARNING Not Found: /include/js/md5.js
+Tue, 09 Jan 2018 13:18:51 base.py[line:152] WARNING Not Found: /include/js/common.js
+Tue, 09 Jan 2018 13:18:52 base.py[line:152] WARNING Not Found: /include/js/ajax.js
+Tue, 09 Jan 2018 13:18:52 base.py[line:152] WARNING Not Found: /res/js/dev/pages/common/global.js
+Tue, 09 Jan 2018 13:18:52 base.py[line:152] WARNING Not Found: /js/wind_editor.js
+Tue, 09 Jan 2018 13:18:52 base.py[line:152] WARNING Not Found: /styles/prosilver/template/forum_fn.js
+Tue, 09 Jan 2018 13:18:53 base.py[line:152] WARNING Not Found: /styles/prosilver/template/styleswitcher.js
+Tue, 09 Jan 2018 13:18:53 base.py[line:152] WARNING Not Found: /editor/ubb/uploader.js
+Tue, 09 Jan 2018 13:18:53 base.py[line:152] WARNING Not Found: /template/default/style.css
+Tue, 09 Jan 2018 13:18:53 base.py[line:152] WARNING Not Found: /images/js/common.js
+Tue, 09 Jan 2018 13:18:54 base.py[line:152] WARNING Not Found: /templets/style/dede.css
+Tue, 09 Jan 2018 13:18:54 base.py[line:152] WARNING Not Found: /include/dedeajax2.js
+Tue, 09 Jan 2018 13:18:54 base.py[line:152] WARNING Not Found: /images/default/inc.js
+Tue, 09 Jan 2018 13:18:54 base.py[line:152] WARNING Not Found: /js/lang/core/zh-cn.js
+Tue, 09 Jan 2018 13:18:55 base.py[line:152] WARNING Not Found: /js/lang/cms/zh-cn.js
+Tue, 09 Jan 2018 13:18:55 base.py[line:152] WARNING Not Found: /d/js/acmsd/ecms_dialog.js
+Tue, 09 Jan 2018 13:18:55 base.py[line:152] WARNING Not Found: /skin/default/js/tabs.js
+Tue, 09 Jan 2018 13:18:55 base.py[line:152] WARNING Not Found: /media/system/js/tab.js
+Tue, 09 Jan 2018 13:18:55 base.py[line:152] WARNING Not Found: /media/system/css/mootree.css
+Tue, 09 Jan 2018 13:18:56 base.py[line:152] WARNING Not Found: /lang/zh/front.js
+Tue, 09 Jan 2018 13:18:56 base.py[line:152] WARNING Not Found: /style/default/content.css
+Tue, 09 Jan 2018 13:18:56 base.py[line:152] WARNING Not Found: /lang/zh/edit.js
+Tue, 09 Jan 2018 13:18:56 base.py[line:152] WARNING Not Found: /rockmongo/
+Tue, 09 Jan 2018 13:18:57 base.py[line:152] WARNING Not Found: /server-status
+Tue, 09 Jan 2018 13:18:57 base.py[line:152] WARNING Not Found: /ueditor.all.js
+Tue, 09 Jan 2018 13:18:57 base.py[line:152] WARNING Not Found: /wikilib.d/PmWiki.ChangeLog
+Tue, 09 Jan 2018 13:18:57 base.py[line:152] WARNING Not Found: /4e5e5d7364f443e28fbf0d3ae744a59a
+Tue, 09 Jan 2018 13:18:57 base.py[line:152] WARNING Not Found: /jenkins/
+Tue, 09 Jan 2018 13:18:58 base.py[line:152] WARNING Not Found: /console/login/LoginForm.jsp
+Tue, 09 Jan 2018 13:18:58 base.py[line:152] WARNING Not Found: /solr/
+Tue, 09 Jan 2018 13:18:58 base.py[line:152] WARNING Not Found: /
+Tue, 09 Jan 2018 13:18:58 base.py[line:152] WARNING Not Found: /
+Tue, 09 Jan 2018 15:24:57 base.py[line:152] WARNING Not Found: /media/
+Tue, 09 Jan 2018 15:26:34 base.py[line:152] WARNING Not Found: /media/
+Tue, 09 Jan 2018 15:27:09 base.py[line:152] WARNING Not Found: /media/
+Tue, 09 Jan 2018 15:27:53 base.py[line:152] WARNING Not Found: /favicon.ico

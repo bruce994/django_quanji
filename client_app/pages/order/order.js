@@ -55,67 +55,87 @@ Page({
                                     var detail = res.data.detail;
                                     uid = detail[0].pk;
                                     openid = detail[0].fields.openid;
+                                }else{
+                                    that.login(config);
                                 }
                           });
                        }
                   });
               },
               fail: function(){
-    //登陆
-    wx.login({
-        success:function(resLogin){
-
-            var code = resLogin.code; //返回code
-            wx.request({
-                   url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + config.appId + '&secret=' + config.secret + '&js_code=' + code + '&grant_type=authorization_code',
-                   data: {},
-                   header: {
-                     'content-type': 'json'
-                   },
-                   success: function (res) {
-                    openid = res.data.openid; //返回openid
-                     wx.getUserInfo({
-                         success:function(res){
-                             var userInfo = res.userInfo;
-                             var option = {
-                                 header: { "Content-Type": "application/x-www-form-urlencoded" },   //post提交需要加这一行
-                                 url: config.api.userinfo_post,
-                                 method:'POST',
-                                 data: {
-                                   openid:openid,
-                                   nickName:userInfo.nickName,
-                                   avatarUrl:userInfo.avatarUrl,
-                                   gender:userInfo.gender,
-                                   city:userInfo.city,
-                                   province:userInfo.province,
-                                   country:userInfo.country,
-                                   language:userInfo.language,
-                                 }
-                             };
-
-                             utils.request(option,
-                                 function (res) {
-                                   if(res.data.result == 'success'){
-                                      //wx.setStorage({key:"openid",data:openid});
-                                      uid = res.data.uid;
-                                   }
-                             });
-
-                         }
-                     });
-
-                   }
-              });
-        }
-    });
-    //END
-  }
-});
-
-
-
+                  that.login(config);
+              }
+            });
 
   },
+
+
+
+
+
+
+      login: function(config){
+        var that = this;
+        //登陆
+        wx.login({
+            success:function(resLogin){
+                var code = resLogin.code; //返回code
+                wx.request({
+                       url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + config.appId + '&secret=' + config.secret + '&js_code=' + code + '&grant_type=authorization_code',
+                       data: {},
+                       header: {
+                         'content-type': 'json'
+                       },
+                       success: function (res) {
+                         var openid = res.data.openid; //返回openid
+                         wx.getUserInfo({
+                             success:function(res){
+                                 var userInfo = res.userInfo;
+                                 var option = {
+                                     header: { "Content-Type": "application/x-www-form-urlencoded" },   //post提交需要加这一行
+                                     url: config.api.userinfo_post,
+                                     method:'POST',
+                                     data: {
+                                       openid:openid,
+                                       nickName:userInfo.nickName,
+                                       avatarUrl:userInfo.avatarUrl,
+                                       gender:userInfo.gender,
+                                       city:userInfo.city,
+                                       province:userInfo.province,
+                                       country:userInfo.country,
+                                       language:userInfo.language,
+                                     }
+                                 };
+                                 utils.request(option,
+                                     function (res) {
+                                       if(res.data.result == 'success'){
+                                            //wx.setStorageSync('uid', res.data.uid);
+                                            var result = {"userInfo":userInfo,"openid":openid,"uid":res.data.uid};
+                                            uid = res.data.uid;
+                                            openid = openid;
+                                       }
+
+                                 });
+
+                             }
+                         });
+
+                       }
+                  });
+            }
+        });
+        //END
+      },
+
+
+
+
+
+
+
+
+
+
 
   onShow: function() {
     var that = this;
@@ -351,6 +371,16 @@ Page({
                        });
                      },
                      'fail': function (res) {
+
+                       //商户订单支付失败需要生成新单号重新发起支付
+                       var option = {
+                           url: config.api.ordering_update+ordering_id,
+                           data: {}
+                       };
+                       utils.request(option,function (res) {});
+                       //END
+
+
                        wx.showToast({
                          title: '支付失败',
                          image: '../../images/error.png',

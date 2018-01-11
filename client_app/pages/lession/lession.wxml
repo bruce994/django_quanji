@@ -1,0 +1,16 @@
+
+
+<view class="listbox">
+  <scroll-view scroll-x = true bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+    <view class="match-list" bindtap='bindViewTap' wx:for="{{list}}" wx:for-index="idx"  wx:for-item="item"  wx:key="{{item.pk}}" data-id="{{item.pk}}" >
+      <image src='{{media}}{{item.fields.picurl}}' class="minPic"></image>
+      <text class="name">{{item.fields.title}}</text>
+      <view class="messagebox">
+        <image src='../../images/time.png' class="icon1"></image>
+        <text>课程时间: {{item.exercise}}</text>
+        <image src='../../images/price.png' class="icon1"></image>
+        <text style="width:80rpx;"> {{item.fields.price}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

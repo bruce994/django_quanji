@@ -1,14 +1,42 @@
 <!--index.wxml-->
-<video  src='{{article1.fields.video}}' class="video"  poster="{{media}}{{article1.fields.picurl}}" controls  objectFit="fill"  class="video"></video>
 
-<view class="match">
-  <text>直播</text>
-  {{article1.fields.title}}
-</view>
 
-<view class="shoppingbtn-box">
-  <view class="shoppingbtn" bindtap='buy' data-id="{{article1.fields.pid}}"  data-aid="{{article1.pk}}"  >购票</view>
-</view>
+<swiper indicator-dots="true" style="height:760rpx;">
+
+
+  <swiper-item  wx:for="{{article1}}" wx:for-index="idx"  wx:for-item="item"  wx:key="{{item.pk}}" data-id="{{item.pk}}">
+        <video src='{{item.fields.video}}' class="video"  poster="{{media}}{{item.fields.picurl}}" controls  objectFit="fill"  class="video"></video>
+        <view class="match" style="text-align:left;">
+          <text>直播</text>
+          {{item.fields.title}}
+        </view>
+        <view class="shoppingbtn-box">
+          <view class="leftbox" style="margin-left:0rpx;border:0rpx;width:60%;">
+            <view class="imbox">
+              <image src='{{media}}{{item.player_a.fields.picurl}}' style="width:130rpx;height:100rpx;"></image>
+              <text>{{item.player_a.fields.username}}</text>
+            </view>
+            <view class="centerbox" style="margin:0 30rpx;">
+              <view>VS</view>
+            </view>
+            <view class="imbox">
+              <image src='{{media}}{{item.player_b.fields.picurl}}' style="width:130rpx;height:100rpx;"></image>
+              <text>{{item.player_b.fields.username}}</text>
+            </view>
+          </view>
+          <view class="shoppingbtn" bindtap='buy' data-id="{{item.fields.pid}}"  data-aid="{{item.pk}}"  >购票</view>
+        </view>
+  </swiper-item>
+
+</swiper>
+
+
+
+
+
+
+
+
 <swiper indicator-dots="true">
     <swiper-item>
 
@@ -20,7 +48,7 @@
           <text>{{article2_1.player_a.fields.username}}</text>
         </view>
         <view class="centerbox">
-          <view>{{article2_1.article.fields.score}}</view>
+          <view>VS</view>
           <view class="lookbtn">看录像</view>
         </view>
         <view class="imbox">
@@ -37,7 +65,7 @@
           <text>{{article2_2.player_a.fields.username}}</text>
         </view>
         <view class="centerbox">
-         <view>{{article2_2.article.fields.score}}</view>
+         <view>VS</view>
           <view class="lookbtn">看录像</view>
         </view>
         <view class="imbox">
@@ -61,7 +89,7 @@
         <text>{{article2_3.player_a.fields.username}}</text>
       </view>
       <view class="centerbox">
-      <view>{{article2_3.article.fields.score}}</view>
+      <view>VS</view>
         <view class="lookbtn">看录像</view>
       </view>
       <view class="imbox">
@@ -78,7 +106,7 @@
         <text>{{article2_4.player_a.fields.username}}</text>
       </view>
       <view class="centerbox">
-      <view>{{article2_4.article.fields.score}}</view>
+      <view>VS</view>
         <view class="lookbtn">看录像</view>
       </view>
       <view class="imbox">
@@ -99,7 +127,8 @@
 <view>
       <view class="matchMessage" bindtap='goContent' wx:for="{{article3}}" wx:for-index="idx"  wx:for-item="item"  wx:key="{{item.pk}}" data-id="{{item.pk}}"  >
         <image src="{{media}}{{item.fields.picurl}}" class="minPic"></image>
-        <view class="match-title">{{item.fields.title}}</view>
+        <view class="match-title" style="overflow:hidden;height:45rpx;" >{{item.fields.title}}</view>
+        <view class="match-title" style="font-size:22rpx;top:70rpx;">{{item.fields.shorttitle}}</view>
         <view class="match-title">
             <view class="messagebox">
               <image src='../../images/time.png' class="icon1"></image>

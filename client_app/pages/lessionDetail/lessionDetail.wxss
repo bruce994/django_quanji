@@ -1,0 +1,265 @@
+page{
+  padding-bottom: 130rpx;
+  background:#fff;
+}
+.orderMessage{
+  width: 100%;
+  box-sizing: 100%;
+  padding: 35rpx 24rpx;
+  background: white;
+  margin: 35rpx auto 0;
+  position: relative;
+  border-top: 1rpx solid #dddddd;
+  border-bottom: 1rpx solid #dddddd;
+}
+.minPic{
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 24rpx;
+}
+.messagebox{
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+.time,.address{
+  color: #666666;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+.type{
+  color: #bdbdbd;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.price{
+  font-size: 50rpx;
+  color: #d02828;
+}
+.price text{
+  font-size: 28rpx;
+  color: black;
+  margin-left: 5rpx;
+}
+.number{
+  position: absolute;
+  right: 24rpx;
+  bottom: 50rpx;
+  color: #999999;
+}
+.buyNumber{
+  line-height: 100rpx;
+  padding: 0 24rpx;
+  background: white;
+  margin-bottom: 40rpx;
+  position: relative;
+}
+.btnList{
+  width: 190rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 50%;
+  -webkit-transform: translateY(-50%)
+}
+.btnList view{
+  width: 60rpx;
+  height: 100%;
+  background: #eeeeee;
+  color: #999999;
+  text-align: center;
+  line-height: 50rpx;
+  float: left;
+}
+.buyTick{
+  background: white;
+  padding: 24rpx;
+  line-height: 2;
+  font-size: 28rpx;
+}
+.btnList view:nth-child(2){
+  width: 70rpx;
+  background: white;
+  color: black;
+}
+.sendType{
+  background: white;
+  box-sizing: border-box;
+  padding: 24rpx;
+  font-size: 28rpx;
+}
+.sendMessge{
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+}
+.btn{
+  width: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 120rpx;
+}
+.noColor{
+  border: 1rpx solid #dddddd;
+  color: #999999;
+}
+.bgColor{
+  background: #47cd60;
+  color: white;
+}
+.sendAddress{
+  width: 100%;
+  padding: 0 24rpx;
+  line-height: 80rpx;
+  background: white;
+  position: relative;
+  border-top: 1rpx solid #dddddd;
+  border-bottom: 1rpx solid #dddddd;
+  margin-top: 40rpx;
+}
+.sendAddress image{
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  width: 15rpx;
+  height: 29rpx;
+  right: 24rpx;
+}
+.addbtn{
+  width: 100%;
+  line-height: 170rpx;
+  text-align: center;
+  border:3rpx dashed #dddddd;
+  background: #fafafa;
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+}
+.addbtn text{
+  color: #bababa;
+
+}
+.fontW{
+  font-weight: bold;
+  font-size: 28rpx;
+  margin-right: 5rpx;
+}
+.allprice{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  background: white;
+  padding:0 24rpx;
+  line-height: 100rpx;
+}
+.signbtn{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #d02828;
+  text-align: center;
+  color: white;
+  line-height: 100rpx;
+  width: 300rpx;
+}
+.allprice text{
+  color: #d02828;
+  margin: 0 12rpx;
+}
+
+
+.address{
+  width: 100%;
+  padding:0 24rpx;
+  line-height: 85rpx;
+  background: white;
+  border-top: 1rpx solid #e5e5e5;
+  font-size: 28rpx;
+  position: relative;
+}
+
+
+.address1{
+  width: 100%;
+  padding:0 24rpx;
+  line-height: 85rpx;
+  background: white;
+  font-size: 28rpx;
+  position: relative;
+}
+
+.address input{
+  float: right;
+  text-align: right;
+  font-size: 28rpx;
+  line-height: 85rpx;
+  height: 85rpx;
+}
+
+
+.name1{
+width:100%;
+font-size:35rpx;
+margin:20rpx;
+}
+
+
+.name2{
+  width:97%;
+  font-size:30rpx;
+  margin:0rpx 20rpx ;
+}
+
+
+.name3{
+width:60%;
+float:left;
+}
+
+.name3_1{
+color:#f0b040;
+font-size:30rpx;
+float:left;
+}
+.name3_2{
+font-size:30rpx;
+float:left;
+}
+
+.signbtn2{
+  float:right;
+  background: #f0b040;
+  text-align: center;
+  color: white;
+  line-height: 50rpx;
+  width: 120rpx;
+}
+
+
+.macth{
+  width: 100%;
+  font-size: 28rpx;
+  background: white;
+  padding: 0rpx 0rpx 0 24rpx;
+  height: 150rpx;
+  white-space: nowrap;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #eeeeee;
+}
+.macth view{
+  margin-right: 15rpx;
+  line-height: 93rpx;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+}
+.blueColor{
+  color: #396bd0;
+  border-bottom: 4rpx solid #396bd0;
+}

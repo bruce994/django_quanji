@@ -208,20 +208,14 @@ swiper image{
 }
 
 
-
-
-
-
-
 .match-title .messagebox{
-  padding-top:100rpx;
+  padding-top:115rpx;
 }
 
 .match-title .messagebox .icon1{
   width: 24rpx;
   height: 24rpx;
-  padding-top:110rpx;
-
+  padding-top:128rpx;
 }
 .match-title .messagebox image,.match-title .messagebox text{
   display: inline-block;

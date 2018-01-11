@@ -26,7 +26,7 @@
       <text class="name">{{item.fields.title}}</text>
       <view class="messagebox">
         <image src='../../images/time.png' class="icon1"></image>
-        <text>{{item.pub_date1}}</text>
+        <text style="width:130rpx;">{{item.pub_date1}}</text>
         <image src='../../images/play.png' class="icon1"></image>
         <text>{{item.play_count1}}</text>
       </view>

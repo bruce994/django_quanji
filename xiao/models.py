@@ -163,6 +163,7 @@ class Article(models.Model):
 
 class Writings(models.Model):
     title = models.CharField('标题',max_length=200,default='')
+    shorttitle = models.CharField('副标题',max_length=200,default='')
     image_path = time.strftime('images/%Y/%m/%d')
     picurl = models.ImageField('',upload_to=help.PathAndRename(image_path) )
     #content = models.TextField('内容',default='')
@@ -254,6 +255,8 @@ class Ordering(models.Model):
     aid  = models.IntegerField('赛事ID',default=0)
     uid  = models.IntegerField('会员ID',default=0)
     pid  = models.IntegerField('场馆ID',default=0)
+    TYPE_CHOICES = ( (0, '赛事'), (1, '课程'),)
+    typeid  = models.IntegerField('类型',default=0,choices=TYPE_CHOICES)
     price_id  = models.IntegerField('票价ID',default=0)
     username = models.CharField('姓名',max_length=20,default='')
     tel = models.CharField('电话',max_length=20,default='')
@@ -276,25 +279,45 @@ class Ordering(models.Model):
 
 
     def aid_name(self):
-        tmp = Article.objects.get(pk=self.aid)
+        if self.typeid == 1 :
+            tmp = Lession.objects.get(pk=self.aid)
+        elif self.typeid == 0 :
+            tmp = Article.objects.get(pk=self.aid)
+        else:
+            return ''
         return  tmp.title
     aid_name.allow_tags = True
-    aid_name.short_description = '赛事'
+    aid_name.short_description = '赛事/课程'
 
     def pid_name(self):
-        tmp = Place.objects.get(pk=self.pid)
+        if self.typeid == 1 :
+            tmp = Teach.objects.get(pk=self.pid)
+        elif self.typeid == 0 :
+            tmp = Place.objects.get(pk=self.pid)
+        else:
+            return ''
         return  tmp.title
     pid_name.allow_tags = True
-    pid_name.short_description = '场馆'
+    pid_name.short_description = '场馆/教练'
 
     def price_name(self):
-        tmp = Price_Place.objects.get(pk=self.price_id)
+        if self.typeid == 1 :
+            tmp = Lession.objects.get(pk=self.aid)
+        elif self.typeid == 0 :
+            tmp = Price_Place.objects.get(pk=self.price_id)
+        else:
+            return ''
         return  tmp.price
     price_name.allow_tags = True
     price_name.short_description = '票价'
 
     def total_price(self):
-        P = Price_Place.objects.get(pk=self.price_id)
+        if self.typeid == 1 :
+            P = Lession.objects.get(pk=self.aid)
+        elif self.typeid == 0 :
+            P = Price_Place.objects.get(pk=self.price_id)
+        else:
+            return ''
         tmp = self.num * P.price
         return  tmp
     total_price.allow_tags = True
@@ -333,5 +356,51 @@ class Pay(models.Model):
         verbose_name = "支付记录"
         verbose_name_plural = "A.支付记录"
 
+
+class Teach(models.Model):
+    title = models.CharField('教练名称',max_length=200)
+    image_path = time.strftime('images/%Y/%m/%d')
+    picurl = models.ImageField(upload_to=help.PathAndRename(image_path),verbose_name="教练照片",max_length=500 )
+    summary = models.TextField('简介',max_length=2001, blank=True)
+    pub_date = models.DateTimeField('发布时间',auto_now_add=True)
+
+    def p_picurl(self):
+        url =  '<img src="%s%s" width="%d" height="%d"/>' % (settings.MEDIA_URL,self.picurl,80,80)
+        return '<a href="%s%s">%s</a>' % (settings.MEDIA_URL,self.picurl,url)
+    p_picurl.allow_tags = True
+    p_picurl.short_description = '教练照片'
+
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        ordering = ['-pub_date']
+        verbose_name = "教练"
+        verbose_name_plural = "C.教练"
+
+
+LESSION_DATE_CHOICES = [(0,"7天"),(1,"一个月"),(2,"三个月"),(3,"6个月"),(4,"8个月"),(5,"一年"),(6,"二年")]
+class Lession(models.Model):
+    title = models.CharField('课程名称',max_length=200)
+    image_path = time.strftime('images/%Y/%m/%d')
+    picurl = models.ImageField(upload_to=help.PathAndRename(image_path),verbose_name="图片",max_length=500 )
+    price = models.FloatField('课程价格',default='0.00')
+    exercise_time = models.IntegerField('课程时间',default=0, choices=LESSION_DATE_CHOICES)
+    address = models.CharField('地址',max_length=1000)
+    pub_date = models.DateTimeField('发布时间',auto_now_add=True)
+    teach_ids = models.ManyToManyField(Teach,verbose_name="选择教练")
+
+    def __str__(self):
+        return self.title
+
+    def get_teachs(self):
+        return " ".join([p.title for p in self.teach_ids.all()])
+    get_teachs.short_description = '教练'
+
+    class Meta:
+        ordering = ['-pub_date']
+        verbose_name = "课程"
+        verbose_name_plural = "B.课程"
 
 

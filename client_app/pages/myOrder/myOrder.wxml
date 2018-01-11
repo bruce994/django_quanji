@@ -9,7 +9,7 @@
           <view class="time">{{item.title.fields.game_date}}</view>
           <view class="address">{{item.place.fields.address}}</view>
           <view class="type">门票类型：</view>
-          <view class="price">{{item.price_place.fields.price}}<text>元</text></view>
+          <view class="price">{{ item.fields.typeid == 0 ? item.price_place.fields.price : item.title.fields.price   }}<text>元</text></view>
           <text class="number">x{{item.fields.num}}</text>
         </view>
       </view>

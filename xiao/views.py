@@ -15,15 +15,28 @@ from django.http import JsonResponse
 from django.db import connection
 
 # Create your views here.
-from .models import Player,Title,Article,Writings,Comment,Userinfo,Place,Price_Place,Ordering,Pay
+from .models import Player,Title,Article,Writings,Comment,Userinfo,Place,Price_Place,Ordering,Pay,Lession,Teach
 
+from random import randint
 from xiao import help
 from xiao import wxpayClass
 
 # Create your views here.
 def index(request,PageNo):
-    article1 = Article.objects.filter(attr=1).order_by('-pub_date')[:1]
+    article1 = Article.objects.filter(attr=1).order_by('-pub_date')
     article1_json  = serializers.serialize('json',article1)
+    data2 = json.loads(article1_json)
+    for f in data2:
+        try:
+            player_a = Player.objects.get(pk=str(f['fields']['player_a']))
+            player_a_json  = serializers.serialize('json',[player_a,])
+            player_b = Player.objects.get(pk=str(f['fields']['player_b']))
+            player_b_json  = serializers.serialize('json',[player_b,])
+            f['player_a'] = json.loads(player_a_json[1:-1])
+            f['player_b'] = json.loads(player_b_json[1:-1])
+        except ObjectDoesNotExist:
+            f['player_a'] = ''
+            f['player_b'] = ''
 
 
     latest_list = Writings.objects.order_by('-pub_date')
@@ -59,7 +72,7 @@ def index(request,PageNo):
             f['player_b'] = ''
 
 
-    data = '{"a":"1","article1":'+article1_json+',"article3":'+article3_json+',"article2":'+json.dumps(data1)+'}'
+    data = '{"a":"1","article1":'+json.dumps(data2)+',"article3":'+article3_json+',"article2":'+json.dumps(data1)+'}'
     return HttpResponse(data, content_type='json')
 
 
@@ -82,15 +95,25 @@ def myOrder(request,uid,order_id,PageNo):
     for f in data1:
         try:
             pk = f['pk']
-            p0 = Article.objects.get(pk=f['fields']['aid'])
-            p0_json  = serializers.serialize('json',[p0,])
-            p1 = Place.objects.get(pk=f['fields']['pid'])
-            p1_json  = serializers.serialize('json',[p1,])
-            p2 = Price_Place.objects.get(pk=f['fields']['price_id'])
-            p2_json  = serializers.serialize('json',[p2,])
-            f['title'] = json.loads(p0_json[1:-1])
-            f['place'] = json.loads(p1_json[1:-1])
-            f['price_place'] = json.loads(p2_json[1:-1])
+            if f['fields']['typeid'] == 0:
+                p0 = Article.objects.get(pk=f['fields']['aid'])
+                p0_json  = serializers.serialize('json',[p0,])
+                p1 = Place.objects.get(pk=f['fields']['pid'])
+                p1_json  = serializers.serialize('json',[p1,])
+                p2 = Price_Place.objects.get(pk=f['fields']['price_id'])
+                p2_json  = serializers.serialize('json',[p2,])
+                f['title'] = json.loads(p0_json[1:-1])
+                f['place'] = json.loads(p1_json[1:-1])
+                f['price_place'] = json.loads(p2_json[1:-1])
+            elif f['fields']['typeid'] == 1:
+                p0 = Lession.objects.get(pk=f['fields']['aid'])
+                p0_json  = serializers.serialize('json',[p0,])
+                p1 = Teach.objects.get(pk=f['fields']['pid'])
+                p1_json  = serializers.serialize('json',[p1,])
+                f['title'] = json.loads(p0_json[1:-1])
+                f['place'] = json.loads(p1_json[1:-1])
+                f['price_place'] = ''
+
         except ObjectDoesNotExist:
             f['place'] = ''
             f['price_place'] = ''
@@ -104,6 +127,12 @@ def myOrder(request,uid,order_id,PageNo):
 def player_list_index(request):
     return player_list(request,1)
 
+
+from xiao.models import LESSION_DATE_CHOICES
+def app_lession_choices(request):
+    level = json.dumps(LESSION_DATE_CHOICES)
+    data = '{"a":"1","level":'+level+'}'
+    return HttpResponse(data, content_type='json')
 
 
 from xiao.models import LEVEL_CHOICES
@@ -246,8 +275,11 @@ def comment_post(request,aid,wid,uid,title):
 def userinfo(request):
     try :
         objects = Userinfo.objects.filter(avatarUrl = request.POST.get('avatarUrl','') )
-        latest_json  = serializers.serialize('json',objects)
-        return HttpResponse('{"result":"success","detail":'+latest_json+'}', content_type='json')
+        if objects :
+            latest_json  = serializers.serialize('json',objects)
+            return HttpResponse('{"result":"success","detail":'+latest_json+'}', content_type='json')
+        else:
+            return HttpResponse('{"result":"error"}', content_type='json')
     except ObjectDoesNotExist:
         return HttpResponse('{"result":"error"}', content_type='json')
 
@@ -349,6 +381,7 @@ def ordering_post(request):
     except ObjectDoesNotExist:
         objects = Ordering()
     objects.pub_date = timezone.now()
+    objects.typeid = request.POST.get('typeid',0)
     objects.aid = request.POST.get('aid',0)
     objects.uid = request.POST.get('uid',0)
     objects.pid = request.POST.get('pid',0)
@@ -362,6 +395,13 @@ def ordering_post(request):
     id = objects.id
     return HttpResponse('{"result":"success","id":'+str(id)+'}', content_type='json')
 
+
+def ordering_update(request,id):
+    n = 16
+    new_id = ''.join(["%s" % randint(0, 9) for num in range(0, n)])   #随机数
+    cursor = connection.cursor()
+    cursor.execute("update xiao_ordering set id='"+new_id+"' where id='"+id+"'")
+    return HttpResponse('{"result":"success","id":'+str(new_id)+'}', content_type='json')
 
 
 @csrf_exempt
@@ -446,6 +486,52 @@ def wxpay(request):
     if pay_info:
         return JsonResponse(pay_info)
     return JsonResponse({'errcode': 40001, 'errmsg': '请求支付失败'})
+
+
+
+def lession_list(request,id,PageNo):
+    if id:
+        latest_list = Lession.objects.filter(id=id)
+        latest_list_json  = serializers.serialize('json',latest_list)
+    else :
+        latest_list = Lession.objects.order_by('-pub_date')
+    paginator = Paginator(latest_list, 8)
+    #page = request.GET.get('page')
+    try:
+        latest_list = paginator.page(PageNo)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        latest_list = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        latest_list = '';
+
+
+    latest_list_json  = serializers.serialize('json',latest_list)
+    data = json.loads(latest_list_json)
+    for f in data:
+        lession_id = f['pk']
+        pub_date = f['fields']['pub_date']
+        pub_date = pub_date.replace("T",' ')
+        #需要加8小时
+        pub_date = datetime.datetime.strptime(pub_date, "%Y-%m-%d %H:%M:%S") + datetime.timedelta(hours=8)
+        #f['pub_date'] = pub_date.strftime("%Y-%m-%d %H:%M:%S")
+        f['pub_date1'] = help.date_compare(pub_date,datetime.datetime.now())
+        teach = Teach.objects.filter(id__in=f['fields']['teach_ids']).order_by('-pub_date')  #范围查询
+        teach_a_json  = serializers.serialize('json',teach)
+        teach_json = json.loads(teach_a_json)
+        f['teach'] = teach_json
+        f['exercise'] = LESSION_DATE_CHOICES[f['fields']['exercise_time']][1]
+
+    data = '{"a":"1","list":'+json.dumps(data)+'}'
+    return HttpResponse(data, content_type='json')
+
+
+
+
+
+
+
 
 
 

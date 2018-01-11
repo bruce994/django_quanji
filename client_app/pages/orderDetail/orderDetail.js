@@ -43,67 +43,81 @@ Page({
                                 var detail = res.data.detail;
                                 uid = detail[0].pk;
                                 openid = detail[0].fields.openid;
+                            }else{
+                              that.login(config);
                             }
                       });
                    }
               });
           },
           fail: function(){
-        //登陆
-        wx.login({
-            success:function(resLogin){
-
-                var code = resLogin.code; //返回code
-                wx.request({
-                       url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + config.appId + '&secret=' + config.secret + '&js_code=' + code + '&grant_type=authorization_code',
-                       data: {},
-                       header: {
-                         'content-type': 'json'
-                       },
-                       success: function (res) {
-                        openid = res.data.openid; //返回openid
-                         wx.getUserInfo({
-                             success:function(res){
-                                 var userInfo = res.userInfo;
-                                 var option = {
-                                     header: { "Content-Type": "application/x-www-form-urlencoded" },   //post提交需要加这一行
-                                     url: config.api.userinfo_post,
-                                     method:'POST',
-                                     data: {
-                                       openid:openid,
-                                       nickName:userInfo.nickName,
-                                       avatarUrl:userInfo.avatarUrl,
-                                       gender:userInfo.gender,
-                                       city:userInfo.city,
-                                       province:userInfo.province,
-                                       country:userInfo.country,
-                                       language:userInfo.language,
-                                     }
-                                 };
-
-                                 utils.request(option,
-                                     function (res) {
-                                       if(res.data.result == 'success'){
-                                          //wx.setStorage({key:"openid",data:openid});
-                                          uid = res.data.uid;
-                                       }
-                                 });
-
-                             }
-                         });
-
-                       }
-                  });
-            }
-        });
-        //END
+            that.login(config);
       }
     });
 
 
-
-
   },
+
+
+
+
+        login: function(config){
+          var that = this;
+          //登陆
+          wx.login({
+              success:function(resLogin){
+                  var code = resLogin.code; //返回code
+                  wx.request({
+                         url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + config.appId + '&secret=' + config.secret + '&js_code=' + code + '&grant_type=authorization_code',
+                         data: {},
+                         header: {
+                           'content-type': 'json'
+                         },
+                         success: function (res) {
+                           var openid = res.data.openid; //返回openid
+                           wx.getUserInfo({
+                               success:function(res){
+                                   var userInfo = res.userInfo;
+                                   var option = {
+                                       header: { "Content-Type": "application/x-www-form-urlencoded" },   //post提交需要加这一行
+                                       url: config.api.userinfo_post,
+                                       method:'POST',
+                                       data: {
+                                         openid:openid,
+                                         nickName:userInfo.nickName,
+                                         avatarUrl:userInfo.avatarUrl,
+                                         gender:userInfo.gender,
+                                         city:userInfo.city,
+                                         province:userInfo.province,
+                                         country:userInfo.country,
+                                         language:userInfo.language,
+                                       }
+                                   };
+                                   utils.request(option,
+                                       function (res) {
+                                         if(res.data.result == 'success'){
+                                              //wx.setStorageSync('uid', res.data.uid);
+                                              var result = {"userInfo":userInfo,"openid":openid,"uid":res.data.uid};
+                                              uid = res.data.uid;
+                                              openid = openid;
+                                         }
+
+                                   });
+
+                               }
+                           });
+
+                         }
+                    });
+              }
+          });
+          //END
+        },
+
+
+
+
+
 
   onShow: function() {
     var that = this;
@@ -124,7 +138,19 @@ Page({
             function (res) {
                 var list = res.data.list;
                 var detail = list[0];
-                var price = detail['price_place']['fields']['price'] * detail['fields']['num'];
+
+                if(detail['fields']['typeid']  == 0){
+                  var price = detail['price_place']['fields']['price'] * detail['fields']['num'];
+                  detail['title']['fields']['game_date'] = detail['title']['fields']['game_date'].replace("T"," ");
+                }else if (detail['fields']['typeid']  == 1) {
+                  var price = detail['title']['fields']['price'] * detail['fields']['num'];
+                  detail['title']['fields']['game_date'] = detail['title']['fields']['pub_date'].replace("T"," ");
+                }else{
+                  var price = 0;
+                  detail['title']['fields']['game_date'] = '';
+                }
+
+
                 detail['totalPrice'] = price;
                 detail['title']['fields']['game_date'] = detail['title']['fields']['game_date'].replace("T"," ");
                 detail['fields']['pub_date'] = detail['fields']['pub_date'].replace("T"," ");
@@ -145,9 +171,16 @@ Page({
 
 
   look:function(e){
+    var that = this;
     var data = e.currentTarget.dataset;
+    var url = '';
+    if(that.data.detail.fields.typeid == 0){
+        url = '../videoDetail/videoDetail?id='+data.id;
+    }else if (that.data.detail.fields.typeid == 1) {
+        url = '../lessionDetail/lessionDetail?id='+data.id;
+    }
     wx.navigateTo({
-      url: '../videoDetail/videoDetail?id='+data.id
+      url: url
     })
   },
 
@@ -178,10 +211,6 @@ Page({
         openid:openid,
         merchant_key:config.merchant_key
       },
-
-
-
-
 
 
        success: function (res) {
