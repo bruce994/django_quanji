@@ -97,11 +97,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django-test',
-        'USER': 'django_test',
-        'PASSWORD': 'ryynet!@#',
-        'HOST': 'sh-cdb-qenvqae8.sql.tencentcdb.com',
-        'PORT': '63986',
+        'NAME': 'test',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
         'OPTIONS': {
             'sql_mode': 'traditional',
         }
